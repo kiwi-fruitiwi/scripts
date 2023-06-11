@@ -685,19 +685,18 @@ Return
 #e::#0
 Return
 
-; convert shift+enter to ctrl+enter in discord to match google sheets
+; convert shift+enter to ctrl+enter in discord to match google sheets!
+; 
 ; we had the opposite, but 🐅 likes the shift+enter sheets behavior, which
 ; is the equivalent of enter, up, up and brings you to the previous row. this 
 ; is kind of like the opposite positional effect of enter
 ;
 ; NOTE: this does not work for LCtrl+Enter. couldn't figure out why
 ^enter::
-if (A_ComputerName = "Tetra" | A_ComputerName = "Kiwi") {
-	if WinActive("ahk_exe discord.exe") {
-		Send, +{Enter}
-	} else {
-		Send, ^{Enter}
-	}
+if WinActive("ahk_exe discord.exe") {
+	Send, +{Enter}
+} else {
+	Send, ^{Enter} ; if we're not in discord, send as normal
 }
 Return
 
