@@ -100,11 +100,13 @@ LAlt::LCtrl
 :*?:kappa!@::{U+03BA}				;κ
 :*?:lambda!@::{U+03BB}				;λ
 :*?:mu!@::{U+03BC}					;μ
+:*?:mean!@::{U+03BC}					;μ
 :*?:xi!@::{U+03BE}					;ξ
 :*?:pi!@::{U+03C0}					;π
 :*?:rho!@::{U+03C1}					;ρ
 
 :c*?:sigma!@::{U+03C3}				;σ
+:c*?:stddev!@::{U+03C3}				;σ
 :c*?:Sigma!@::{U+03A3}				;Σ
 :*?:psi!@::{U+03C8}					;ψ
 :*?:phi!@::{U+03C6}					;ϕ
@@ -335,13 +337,14 @@ LAlt::LCtrl
 :*?:beads!@::{U+1F4FF}					;📿
 :*?:war!@::{U+1FA96}					;🪖
 :*?:credit!@::{U+1F4B3}					;💳
+:*?:buy!@::{U+1F4B3}					;💳
 :*?:puzzle!@::{U+1F9E9}					;🧩
 :*?:learn!@::{U+1F393}					;🎓
 :*?:lesson!@::{U+1F393}					;🎓
 :*?:coffee!@::{U+2615}					;☕
 :*?:pill!@::{U+1F48A}					;💊
 :*?:kiwi!@::{U+1F95D}					;🥝
-:*?:apple!@::{U+1F34E}					;🍎
+:*:apple!@::{U+1F34E}					;🍎 ; removed '?' due to pineapple
 :*?:tot!@::{U+1F954}					;🥔
 :*?:idea!@::{U+1F4A1}					;💡
 :*?:lightbulb!@::{U+1F4A1}				;💡
@@ -427,6 +430,7 @@ LAlt::LCtrl
 :*?:network!@::{U+1F4F6}				;📶
 :*?:wind!@::{U+1F4A8}					;💨
 :*?:feature!@::{U+1F3D7}{U+FE0F}		;🏗
+:*?:repair!@::{U+1F3D7}					;🏗
 :*?:unlock!@::{U+1F513}					;🔓
 :*?:hammer!@::{U+1F528}					;🔨
 :*?:clips!@::{U+1F587}					;🖇
@@ -539,9 +543,16 @@ LAlt::LCtrl
 :*?:tv!@::{U+1F4FA}						;📺
 :*?:gas!@::{U+26FD}						;⛽
 :*?:fox!@::{U+1F98A}					;🦊
+:*?:watermelon!@::{U+1F349}				;🍉
+:*?:pineapple!@::{U+1F34D}				;🍍
 :*?:mango!@::{U+1F96D}					;🥭
+:*?:lemon!@::{U+1F34B}					;🍋
+:*?:pear!@::{U+1F350}					;🍐
 :*?:orange!@::{U+1F34A}					;🍊
 :*?:sb!@::{U+1F353}						;🍓
+:*?:bb!@::{U+1FAD0}						;🫐
+:*?:cherry!@::{U+1F352}					;🍒
+:*?:grapes!@::{U+1F347}					;🍇
 :*?:march!@::{U+1F9BF}					;🦿
 :*?:schmet!@::{U+1F98B}					;🦋
 :*?:schmett!@::{U+1F98B}				;🦋
@@ -639,8 +650,7 @@ LAlt::LCtrl
 :*?:mlcom!@::(*  *){left 3}				;inline comment: st4 sml
 :*?:code!@::<span class="code">			;code span
 :*?:codediv!@::<div class="code">		;code div
-:*?:jslog!@::console.log(``${{}{}}``){left 3}
-
+:*?:jsprint!@::console.log(``${{}{}}``){left 3}
 
 ;github
 :*?:glo!@::git log --oneline
