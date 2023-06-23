@@ -567,6 +567,8 @@ LAlt::LCtrl
 :*?:nap!@::{U+1F4A4}					;💤
 :*?:fish!@::{U+1F420}					;🐠
 :*?:shark!@::{U+1F988}					;🦈
+:*?:ring!@::{U+1F48D}					;💍
+:*?:ltr!@::{U+1F947}					;🥇
 
 
 :*?:eyebreak!@::eye{U+1F9D8}{U+1F3FD}{U+200D} ;eye🧘🏽‍
@@ -596,6 +598,25 @@ LAlt::LCtrl
 :*?:pfkm!@::Pathfinder Kingmaker
 :*?:dvr!@::davinci resolve
 :*?:hk!@::hollow knight
+
+
+; magic arena set:ltr
+:*?:grish!@::Grishn{U+00E1}kh			;Grishnákh
+:*?:ugluk!@::Ugl{U+00FA}k				;Uglúk
+:*?:mauhur!@::Mauh{U+00FA}r				;Mauhúr
+:*?:nazgul!@::Nazg{U+00FB}l				;Nazgûl
+:*?:eowyn!@::{U+00C9}owyn				;Éowyn
+:*?:eomer!@::{U+00C9}omer				;Éomer
+:*?:theoden!@::Th{U+00E9}oden			;Théoden
+:*?:orien!@::{U+00F3}rien				;órien
+:*?:grima!@::Gr{U+00ED}ma				;Gríma
+:*?:undomiel!@::Und{U+00F3}miel			;Undómiel
+:*?:anduril!@::And{U+00FA}ril			;Andúril
+:*?:barad!@::Barad-d{U+00FB}r			;Barad-dûr
+:*?:smeagol!@::Sm{U+00E9}agol			;Sméagol
+:*?:dunedain!@::D{U+00FA}nedain			;Dúnedain
+:*?:troll!@::Troll of Khazad-d{U+00FB}m	;Troll of Khazad-dûm
+
 ;:*?:rr!@::repairandrecharge			;repairandrecharge
 
 
