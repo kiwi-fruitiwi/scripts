@@ -571,6 +571,9 @@ LAlt::LCtrl
 :*?:ltr!@::{U+1F947}					;🥇
 
 
+:*?:byte!@::````{left}{U+1F3ED}{right}	;`🏭`
+
+
 :*?:eyebreak!@::eye{U+1F9D8}{U+1F3FD}{U+200D} ;eye🧘🏽‍
 :*?:featr!@::{U+1F3D7}{U+FE0F}.{U+1F52C} ;🏗️.🔬
 
