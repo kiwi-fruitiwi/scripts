@@ -569,8 +569,10 @@ LAlt::LCtrl
 :*?:shark!@::{U+1F988}					;🦈
 :*?:ring!@::{U+1F48D}					;💍
 :*?:ltr!@::{U+1F947}					;🥇
+:*?:poop!@::{U+1F4A9}					;💩
 
 
+:*?:poo!@::````{left}{U+1F4A9}{right}	;💩
 :*?:byte!@::````{left}{U+1F3ED}{right}	;`🏭`
 
 
@@ -612,6 +614,7 @@ LAlt::LCtrl
 :*?:eomer!@::{U+00C9}omer				;Éomer
 :*?:theoden!@::Th{U+00E9}oden			;Théoden
 :*?:orien!@::{U+00F3}rien				;órien
+:*?:gloin!@::Gl{U+00F3}in				;Glóin
 :*?:grima!@::Gr{U+00ED}ma				;Gríma
 :*?:undomiel!@::Und{U+00F3}miel			;Undómiel
 :*?:anduril!@::And{U+00FA}ril			;Andúril
