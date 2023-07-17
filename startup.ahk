@@ -290,10 +290,13 @@ LAlt::LCtrl
 :*?:paper!@::{U+1F4C3}					;📃
 :*?:scroll!@::{U+1F4DC}					;📜
 
+:*?:heartflame!@::{U+2764}{U+200D}{U+1F525}		;❤‍🔥
 :*?:pig!@::{U+208D}{U+1422}{U+FF65}{U+2687}{U+FF65}{U+1422}{U+208E} ;₍ᐢ･⚇･ᐢ₎
+
 :*?:bigheart!@::{U+2661}				;♡
 :*?:glowheart!@::{U+1F497} 				;💗
-:*?:heart!@::{U+1F496}					;💖
+:*?:sparkleheart!@::{U+1F496}			;💖
+:*?:heart!@::{U+2764}					;❤
 :*?:snake!@::{U+1F40D}					;🐍
 :*?:snail!@::{U+1F40C}					;🐌
 :*?:calendar!@::{U+1F4C5}				;📅
@@ -338,6 +341,7 @@ LAlt::LCtrl
 :*?:war!@::{U+1FA96}					;🪖
 :*?:credit!@::{U+1F4B3}					;💳
 :*?:buy!@::{U+1F4B3}					;💳
+:*?:purchase!@::{U+1F4B3}				;💳
 :*?:puzzle!@::{U+1F9E9}					;🧩
 :*?:learn!@::{U+1F393}					;🎓
 :*?:lesson!@::{U+1F393}					;🎓
@@ -362,15 +366,15 @@ LAlt::LCtrl
 :*?:fire!@::{U+1F525}					;🔥
 :*?:polish!@::{U+1F48E}					;💎
 :*?:gem!@::{U+1F48E}					;💎
-:*?:sun!@::{U+2600}{U+FE0F}				;️☀
-:*?:daily!@::{U+1F324}{U+FE0F}			;️🌤️
-:*?:warcry!@::{U+1FAB6}					;️🪶
-:*?:feather!@::{U+1FAB6}				;️🪶
-:*?:candle!@::{U+1F56F}					;️🕯
-:*?:investigate!@::{U+1F50E}			;️🔎
-:*?:coin!@::{U+1FA99}					;️🪙
-:*?:gold!@::{U+1FA99}					;️🪙
-:*?:atom!@::{U+269B}					;️⚛
+:*?:sun!@::{U+2600}{U+FE0F}				;☀
+:*?:daily!@::{U+1F324}{U+FE0F}			;🌤️
+:*?:warcry!@::{U+1FAB6}					;🪶
+:*?:feather!@::{U+1FAB6}				;🪶
+:*?:candle!@::{U+1F56F}					;🕯
+:*?:investigate!@::{U+1F50E}			;🔎
+:*?:coin!@::{U+1FA99}					;🪙
+:*?:gold!@::{U+1FA99}					;🪙
+:*?:atom!@::{U+269B}					;⚛
 :*?:mirror!@::{U+1FA9E}					;🪞
 :*?:bath!@::{U+1F6C0}{U+1F3FD}			;🛀🏽
 :*?:camera!@::{U+1F4F7}					;📷
@@ -388,7 +392,7 @@ LAlt::LCtrl
 :*?:history!@::{U+1F3DB}				;🏛
 :*?:beetle!@::{U+1FAB2}					;🪲
 :*?:grub!@::{U+1F41B}					;🐛
-:*?:bug!@::{U+1F41E}					;🐞
+;:*?:ladybug!@::{U+1F41E}				;🐞 collision with discordBug
 :*?:depart!@::{U+1F6EB}					;🛫
 :*?:dna!@::{U+1F9EC}					;🧬
 :*?:house!@::{U+1F3E0}					;🏠
@@ -415,6 +419,7 @@ LAlt::LCtrl
 :*?:drop!@::{U+1F4A7}					;💧
 :*?:two!@::{U+1F6B8}					;🚸
 :*?:shield!@::{U+1F6E1}					;🛡
+:*?:totk!@::{U+1F6E1}					;🛡 ←tears of the kingdom
 :*?:aoe4!@::{U+1F6E1}{U+2074}			;🛡⁴
 :*?:sage!@::{U+2728}					;✨
 :*?:sparkle!@::{U+2728}					;✨
@@ -459,7 +464,7 @@ LAlt::LCtrl
 :*?:honey!@::{U+1F36F}					;🍯
 :*?:hideout!@::{U+1F3E2}				;🏢
 :*?:chem!@::{U+1F9EA}					;🧪
-:*?:disc!@::{U+1F94F}{space}			;🥏 
+:*?:disc!@::{U+1F94F}					;🥏 
 :*?:warning!@::{U+26A0}					;⚠
 :*?:eggplant!@::{U+1F346}				;🍆
 :*?:anatomy!@::{U+1FAC0}				;🫀
@@ -546,6 +551,7 @@ LAlt::LCtrl
 :*?:watermelon!@::{U+1F349}				;🍉
 :*?:pineapple!@::{U+1F34D}				;🍍
 :*?:mango!@::{U+1F96D}					;🥭
+:*?:peach!@::{U+1F351}					;🍑
 :*?:lemon!@::{U+1F34B}					;🍋
 :*?:pear!@::{U+1F350}					;🍐
 :*?:orange!@::{U+1F34A}					;🍊
@@ -568,16 +574,67 @@ LAlt::LCtrl
 :*?:fish!@::{U+1F420}					;🐠
 :*?:shark!@::{U+1F988}					;🦈
 :*?:ring!@::{U+1F48D}					;💍
-:*?:ltr!@::{U+1F947}					;🥇
+:*?:gp!@::{U+1F3C5}						;🏅 good play! opposite of punt 🏈
+:*?:bow!@::{U+1F3F9}					;🏹
+:*?:horn!@::{U+1F4EF}					;📯
+:*?:file!@::{U+1F4C1}					;📁
+:*?:tp!@::{U+1F9FB}						;🧻
+:*?:dove!@::{U+1F54A}					;🕊
+:*?:tea!@::{U+1F375}					;🍵
+
+
 :*?:poop!@::{U+1F4A9}					;💩
 
 
+; ask GPT to make !@# do !@ but with ````{left}{U+1F}{right}
+
+/*
+:*?:*:@@:: ; Replace "@@" with the emoji name delimiter of your choice
+Input, typed, L1 T1 V
+if (InStr(typed, "!" . "@")) {
+    StringReplace, typed, typed, !"@",, All ; Remove "!@"
+    SendInput, {Left} ; Push cursor back by one space
+    SendInput, % GetEmoji(typed)
+}
+return
+
+GetEmoji(name) {
+    ; Define the emoji mappings here
+    if (name = "smile")
+        return "😄"
+    if (name = "heart")
+        return "❤️"
+    if (name = "thumbsup")
+        return "👍"
+    ; Add more emoji mappings as needed
+
+    return "" ; Return empty string if no matching emoji is found
+}
+In this modified script, the :*?:*:@@:: hotstring captures any text input that includes @@. The input is then processed to check if it ends with !@. If it does, the !@ is removed from the input, the cursor is moved back by one space using {Left}, and the corresponding emoji is sent using the GetEmoji() function.
+
+To add more emoji mappings, simply expand the GetEmoji() function by adding additional if conditions. The name parameter represents the emoji's name, and you can return the corresponding emoji symbol.
+
+To use this script:
+
+Install AutoHotkey from the official website: https://www.autohotkey.com/
+Create a new text file and paste the modified script into it.
+Save the file with a .ahk extension, e.g., emoji.ahk.
+Double-click the file to run the script. The AutoHotkey icon will appear in the system tray to indicate that the script is active.
+Now, whenever you type the emoji name followed by !@, AutoHotkey will replace it with the corresponding emoji and move the cursor back by one space. For example, typing smile!@ will produce 😄 and position the cursor before the exclamation mark.
+
+You can customize the script by adding more emoji mappings to the GetEmoji() function. Just make sure to follow the same pattern and use the correct Unicode representation for each emoji.
+*/
+
+; discord markdown code span emojis 
 :*?:poo!@::````{left}{U+1F4A9}{right}	;💩
 :*?:byte!@::````{left}{U+1F3ED}{right}	;`🏭`
+:*?:bug!@::````{left}{U+1F41B}{right}	;`🐛`
 
 
 :*?:eyebreak!@::eye{U+1F9D8}{U+1F3FD}{U+200D} ;eye🧘🏽‍
 :*?:featr!@::{U+1F3D7}{U+FE0F}.{U+1F52C} ;🏗️.🔬
+
+:*?:bearcon!@::{U+1F43B}.{U+1F3D7}		;🐻.🏗
 
 
 :*?:trademark!@::{U+2122}				;™
@@ -593,7 +650,7 @@ LAlt::LCtrl
 :*?:c.b!@::cody.bearba@gmail.com		;cody.bearba@gmail.com
 :*?:w.t!@::winry.tian@gmail.com			;winry.tian@gmail.com
 :*?:t.t!@::triforce.tofu@gmail.com		;triforce.tofu@gmail.com
-:*?:@g::@gmail.com						;@gmail.com
+:*?:@@g::@gmail.com						;@gmail.com
 
 :*?:jc!@::**JackCompiler**				;**JackCompiler**
 :*?:tears!@::Tears of the Kingdom		;Tears of the Kingdom
@@ -609,6 +666,7 @@ LAlt::LCtrl
 :*?:grish!@::Grishn{U+00E1}kh			;Grishnákh
 :*?:ugluk!@::Ugl{U+00FA}k				;Uglúk
 :*?:mauhur!@::Mauh{U+00FA}r				;Mauhúr
+:*?:tinu!@::Tin{U+00FA}viel				;Tinúviel
 :*?:nazgul!@::Nazg{U+00FB}l				;Nazgûl
 :*?:eowyn!@::{U+00C9}owyn				;Éowyn
 :*?:eomer!@::{U+00C9}omer				;Éomer
@@ -616,7 +674,7 @@ LAlt::LCtrl
 :*?:orien!@::{U+00F3}rien				;órien
 :*?:gloin!@::Gl{U+00F3}in				;Glóin
 :*?:grima!@::Gr{U+00ED}ma				;Gríma
-:*?:undomiel!@::Und{U+00F3}miel			;Undómiel
+:*?:undo!@::Und{U+00F3}miel				;Undómiel
 :*?:anduril!@::And{U+00FA}ril			;Andúril
 :*?:barad!@::Barad-d{U+00FB}r			;Barad-dûr
 :*?:smeagol!@::Sm{U+00E9}agol			;Sméagol
@@ -628,19 +686,18 @@ LAlt::LCtrl
 
 
 ; 🛩️🛻 🇷🇵 🇱🇪🇦🇬🇺🇪 💮💠🧸
-
-
-:*?:space!@::{U+23B5}					;⎵
-:*?:flat!@::{U+266D}					;♭
-:*?:sharp!@::{U+266F}					;♯
-:*?:natural!@::{U+266E}					;♮
+:*?:space!@::{U+23B5}				;⎵
+:*?:flat!@::{U+266D}				;♭
+:*?:sharp!@::{U+266F}				;♯
+:*?:natural!@::{U+266E}				;♮
 
 
 :*?:wdis!@::winry{U+1F4FF}{U+2190}	;winry📿←
 :*?:cdis!@::cody{U+1F4FF}{U+2190}	;cody📿←
 
-:*?:walk!@::{U+1F6B6}{U+1F3FD}{U+200D}{U+2640}	;🚶🏽‍♀
-:*?:arena!@::{U+1F3B4}{U+1D2C}{U+1D3F}{U+1D31}{U+1D3A}{U+1D2C} ;🎴ᴬᴿᴱᴺᴬ
+:*?:walk!@::{U+1F6B6}{U+1F3FD}{U+200D}{U+2640}			;🚶🏽‍♀
+:*?:arena!@::{U+1F48D}{U+1D2C}{U+1D3F}{U+1D31}{U+1D3A}{U+1D2C} 	;💍ᴬᴿᴱᴺᴬ
+:*?:ltr!@::{U+1F48D}{U+1D38}{U+1D40}{U+1D3F}			;💍ᴸᵀᴿ
 :*?:mah!@::ma.himura1rk
 
 ; ⊼ [ᴛᴜʀɪɴɢ ᴄᴏᴍᴘʟᴇᴛᴇ]
@@ -709,6 +766,7 @@ LAlt::LCtrl
 #w::
 	MsgBox %A_ComputerName%
 Return
+
 
 ; disable teams shortcut
 #c::
