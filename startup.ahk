@@ -106,7 +106,7 @@ LAlt::LCtrl
 :*?:rho!@::{U+03C1}					;ρ
 
 :c*?:sigma!@::{U+03C3}				;σ
-:c*?:stddev!@::{U+03C3}				;σ
+:c*?:stdev!@::{U+03C3}				;σ
 :c*?:Sigma!@::{U+03A3}				;Σ
 :*?:psi!@::{U+03C8}					;ψ
 :*?:phi!@::{U+03C6}					;ϕ
@@ -123,6 +123,7 @@ LAlt::LCtrl
 
 ; mathy things
 :*?:ppd!@::{U+27C2} 				;⟂
+:*?:deg!@::{Asc 0186}				;º
 :*?:degrees!@::{Asc 0186}			;º
 :*?:faren!@::{Asc 0186}F			;ºF
 :*?:celsius!@::{Asc 0186}C			;ºC
@@ -286,7 +287,7 @@ LAlt::LCtrl
 :*?:resolve!@::{U+1F4FD}				;📽
 :*?:video!@::{U+1F4F9}					;📹
 :*?:d6!@::{U+1F3B2}						;🎲
-:*?:pset!@::{U+1F3B2}					;🎲 a repeat of dice
+:*?:pset!@::{U+1F3B2}					;🎲 a repeat of d6
 :*?:paper!@::{U+1F4C3}					;📃
 :*?:scroll!@::{U+1F4DC}					;📜
 
@@ -329,6 +330,7 @@ LAlt::LCtrl
 :*?:butter!@::{U+1F9C8}					;🧈
 :*?:piano!@::{U+1F3B9}					;🎹
 :*?:exercise!@::{U+1F3CB}{U+1F3FD}		;🏋🏽
+:*?:meditate!@::{U+1F9D8}{U+1F3FD}		;🧘🏽
 :*?:nani!@::{U+2753}					;❓
 :*?:question!@::{U+2754}				;❔
 :*?:hotkey!@::{U+2328}					;⌨
@@ -359,6 +361,7 @@ LAlt::LCtrl
 :*?:books!@::{U+1F4DA}					;📚
 :*?:test!@::{U+1F94B}					;🥋
 :*?:min!@::{U+231A}						;⌚
+:*?:time!@::{U+231A}					;⌚
 :*?:clock!@::{U+1F570}					;🕰
 :*?:party!@::{U+1F389}					;🎉
 :*?:trash!@::{U+1F6AE}					;🚮
@@ -419,7 +422,7 @@ LAlt::LCtrl
 :*?:drop!@::{U+1F4A7}					;💧
 :*?:two!@::{U+1F6B8}					;🚸
 :*?:shield!@::{U+1F6E1}					;🛡
-:*?:totk!@::{U+1F6E1}					;🛡 ←tears of the kingdom
+:*?:tears!@::{U+1F6E1}					;🛡 ←tears of the kingdom
 :*?:aoe4!@::{U+1F6E1}{U+2074}			;🛡⁴
 :*?:sage!@::{U+2728}					;✨
 :*?:sparkle!@::{U+2728}					;✨
@@ -435,7 +438,7 @@ LAlt::LCtrl
 :*?:network!@::{U+1F4F6}				;📶
 :*?:wind!@::{U+1F4A8}					;💨
 :*?:feature!@::{U+1F3D7}{U+FE0F}		;🏗
-:*?:repair!@::{U+1F3D7}					;🏗
+:*?:repair!@::{U+1F527}					;🔧
 :*?:unlock!@::{U+1F513}					;🔓
 :*?:hammer!@::{U+1F528}					;🔨
 :*?:clips!@::{U+1F587}					;🖇
@@ -468,7 +471,7 @@ LAlt::LCtrl
 :*?:warning!@::{U+26A0}					;⚠
 :*?:eggplant!@::{U+1F346}				;🍆
 :*?:anatomy!@::{U+1FAC0}				;🫀
-:*?:podcast!@::{U+1F3A7}				;🎧
+:*?:headphones!@::{U+1F3A7}				;🎧
 :*?:globeafrica!@::{U+1F30D}			;🌍
 :*?:geography!@::{U+1F30D}				;🌍
 :*?:geo!@::{U+1F30D}					;🌍
@@ -511,6 +514,7 @@ LAlt::LCtrl
 :*?:hill!@::{U+1F3D4}					;🏔
 :*?:mic!@::{U+1F399}					;🎙
 :*?:discord!@::{U+1F399}				;🎙
+:*?:podcast!@::{U+1F399}				;🎙
 :*?:ighq!@::{U+1F3E8}					;🏨
 :*?:banana!@::{U+1F34C}					;🍌
 :*?:nuts!@::{U+1F95C}					;🥜
@@ -529,7 +533,9 @@ LAlt::LCtrl
 :*?:cake!@::{U+1F370}					;🍰
 :*?:umbrella!@::{U+2614}				;☔
 :*?:plumber!@::{U+1FAA0}				;🪠
-:*?:punt!@::{U+1F3C8}					;🏈
+:*:punt!@::{U+1F3C8}					;🏈
+:*?:antipunt!@::{U+2755}{U+1F3C8}		;❕🏈 also see 'gp' for 'good play'
+:*?:gp!@::{U+1F3C5}						;🏅 good play! opposite of punt 🏈
 :;*?:verified!@::{U+1F993}				;🦓
 :*?:deal!@::{U+1F98C}					;🦌
 :*?:check!@::{U+2714}{U+FE0F}			;✔️
@@ -574,16 +580,46 @@ LAlt::LCtrl
 :*?:fish!@::{U+1F420}					;🐠
 :*?:shark!@::{U+1F988}					;🦈
 :*?:ring!@::{U+1F48D}					;💍
-:*?:gp!@::{U+1F3C5}						;🏅 good play! opposite of punt 🏈
 :*?:bow!@::{U+1F3F9}					;🏹
 :*?:horn!@::{U+1F4EF}					;📯
 :*?:file!@::{U+1F4C1}					;📁
 :*?:tp!@::{U+1F9FB}						;🧻
 :*?:dove!@::{U+1F54A}					;🕊
+:*?:noise!@::{U+1F54A}					;🕊
 :*?:tea!@::{U+1F375}					;🍵
-
-
 :*?:poop!@::{U+1F4A9}					;💩
+:*?:door!@::{U+1F6AA}					;🚪
+:*?:bed!@::{U+1F6CC}					;🛌
+:*?:recycle!@::{U+267B}					;♻
+:*?:notes!@::{U+1F4DD}					;📝
+:*?:toilet!@::{U+1F6BD}					;🚽
+:*?:hospital!@::{U+1F3E5}				;🏥
+:*?:lovehotel!@::{U+1F3E9}				;🏩
+
+
+; winry's logging sheet warcry
+::backtodesk::
+Send, !i
+Sleep, 100
+Send, rr
+Send, ^y
+Send, ^y
+Send, ^y
+Send, ^y
+Sleep, 100
+Send, {Down}
+Sleep, 100
+Send, {Down}
+Sleep, 100
+Send, {Down}
+Sleep, 100
+Send, {Down}
+Sleep, 100
+Send, {Down}
+Sleep, 100
+SendInput Warcry{Up}Break and Water Timer{up}Water {+} Gargle{Up}Logging{Up}Awareness{Up}Discord{Up}
+return
+
 
 
 ; ask GPT to make !@# do !@ but with ````{left}{U+1F}{right}
@@ -626,9 +662,12 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 */
 
 ; discord markdown code span emojis 
-:*?:poo!@::````{left}{U+1F4A9}{right}	;💩
-:*?:byte!@::````{left}{U+1F3ED}{right}	;`🏭`
-:*?:bug!@::````{left}{U+1F41B}{right}	;`🐛`
+:*?:poo!@::````{left}{U+1F4A9}{right}		;`💩`
+:*?:byte!@::````{left}{U+1F3ED}{right}		;`🏭`
+:*?:commit!@::````{left}{U+1F948}{right}	;`🥈`
+:*?:bit!@::````{left}{U+1F949}{right}		;`🥉`
+:*?:bug!@::````{left}{U+1F41B}{right}		;`🐛`
+:*?:ank!@::````{left}{U+1F4C7}{right}		;`📇`
 
 
 :*?:eyebreak!@::eye{U+1F9D8}{U+1F3FD}{U+200D} ;eye🧘🏽‍
@@ -653,7 +692,7 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 :*?:@@g::@gmail.com						;@gmail.com
 
 :*?:jc!@::**JackCompiler**				;**JackCompiler**
-:*?:tears!@::Tears of the Kingdom		;Tears of the Kingdom
+:*?:totk!@::Tears of the Kingdom		;Tears of the Kingdom
 :*?:ka!@::Khan Academy					;Khan Academy
 
 :*?:maa!@::man-at-arms
@@ -678,7 +717,7 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 :*?:anduril!@::And{U+00FA}ril			;Andúril
 :*?:barad!@::Barad-d{U+00FB}r			;Barad-dûr
 :*?:smeagol!@::Sm{U+00E9}agol			;Sméagol
-:*?:dunedain!@::D{U+00FA}nedain			;Dúnedain
+:*?:dune!@::D{U+00FA}nedain				;Dúnedain
 :*?:troll!@::Troll of Khazad-d{U+00FB}m	;Troll of Khazad-dûm
 
 ;:*?:rr!@::repairandrecharge			;repairandrecharge
@@ -698,7 +737,13 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 :*?:walk!@::{U+1F6B6}{U+1F3FD}{U+200D}{U+2640}			;🚶🏽‍♀
 :*?:arena!@::{U+1F48D}{U+1D2C}{U+1D3F}{U+1D31}{U+1D3A}{U+1D2C} 	;💍ᴬᴿᴱᴺᴬ
 :*?:ltr!@::{U+1F48D}{U+1D38}{U+1D40}{U+1D3F}			;💍ᴸᵀᴿ
+:*?:woe!@::{U+1F341}{U+1D42}{U+1D3C}{U+1D31}			;🍁ᵂᴼᴱ
 :*?:mah!@::ma.himura1rk
+
+
+; st, th, rd, nd. avoids much bigger 'n' in lowercase
+:*?:woe!@::{U+1D42}{U+1D3C}{U+1D31}			;🍁ᵂᴼᴱ
+
 
 ; ⊼ [ᴛᴜʀɪɴɢ ᴄᴏᴍᴘʟᴇᴛᴇ]
 ; 🅐🅡🅔🅝🅐
@@ -708,7 +753,7 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 ; medals
 :*?:goldmedal!@::{U+1F947}				;🥇
 :*?:silvermedal!@::{U+1F948}			;🥈
-:*?:commit!@::{U+1F948}					;🥈
+:*?:silver!@::{U+1F948}					;🥈
 :*?:bronzemedal!@::{U+1F949}			;🥉
 :*?:bronze!@::{U+1F949}					;🥉
 :*?:trophy!@::{U+1F3C6}					;🏆
