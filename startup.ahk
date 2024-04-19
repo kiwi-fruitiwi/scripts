@@ -24,8 +24,12 @@ Return
 LCtrl::LAlt
 LAlt::LCtrl
 
-; * means no ending char is needed to trigger
 ; ? means no beginning char is needed to trigger
+; * means no ending char is needed to trigger
+
+; ? hotstring will be triggered even when it is inside another word
+; * ending char (space, enter) not required to trigger
+; c case sensitive
 
 #WheelUp::Volume_Up
 #WheelDown::Volume_Down
@@ -56,6 +60,11 @@ LAlt::LCtrl
 	return
 
 
+:*?:dist!@::distribution			;distribution
+:*?:bern!@::Bernoulli				;Bernoulli
+:*?:hyp!@::hypergeometric			;hypergeometric
+
+
 :*?:brk!@::<br/>					;<br/>
 :*?:popo!@::{+}1`/`{+}1				;+1/+1
 :*?:momo!@::`-1/-1					;-1/-1
@@ -69,7 +78,7 @@ LAlt::LCtrl
 :*?:<<!@::{Asc 0171}				;«
 :*?:>.::{U+279C}					;➜ heavy round-tipped, dingbats
 :*?:<.::{U+2190}					;← 🠔 🠘 ⭠ ⮈
-:*?:up!@::{U+2191}					;↑
+:*:up!@::{U+2191}					;↑
 :*?:.>::{U+2192}					;→ 🠖 🠚 ⭢ ⮊
 									;:*?:,>::{U+279E}					;➞ ➞
 :*?:,>::{U+1F81A}
@@ -107,6 +116,7 @@ LAlt::LCtrl
 
 :c*?:sigma!@::{U+03C3}				;σ
 :c*?:stdev!@::{U+03C3}				;σ
+:c*?:stats!@::{U+03C3}				;σ
 :c*?:Sigma!@::{U+03A3}				;Σ
 :*?:psi!@::{U+03C8}					;ψ
 :*?:phi!@::{U+03C6}					;ϕ
@@ -175,7 +185,7 @@ LAlt::LCtrl
 ; superscript 0-9, i, n, +, -
 :?*:^^1::{U+00B9} 				;¹
 :?*:^^2::{U+00B2}
-:?*:^^3::{U+00B3}
+:?*:^^3::{U+00B3}				;³
 :?*:^^0::{U+2070}
 
 :?*:^^i::{U+2071}
@@ -255,15 +265,15 @@ LAlt::LCtrl
 
 
 ; misc
-:*?:xbox!@::{U+2612}				;☒
-:*?:box!@::{U+2610}					;☐
+;:*?:xbox!@::{U+2612}				;☒
+;:*?:box!@::{U+2610}				;☐
 :*?:12!@::{U+2610}{SPACE}			;☐
 :*?:123!@::{U+2612}{SPACE}			;☒
 :*?:blender!@::{U+25C8}				;◈
 :*?:rook!@::{U+265C}				;♜
 :*?:chess!@::{U+2658}				;♘
 :*?:knight!@::{U+2658}				;♘♞
-:*?:xiv!@::{U+246D}					;⑭
+;:*?:xiv!@::{U+246D}					;⑭
 :*?:ae!@::{U+00E6}					;æ
 :*?:AE!@::{U+00C6}					;Æ
 
@@ -274,20 +284,17 @@ LAlt::LCtrl
 
 :*?:hourlist!@::`t2300{+}`n0000{+}`n0100{+}`n0200{+}`n0300{+}`n0400{+}`n0500{+}`n0600{+}`n0700{+}`n0800{+}`n0900{+}`n1000{+}`n1100{+}`n1200{+}`n1300{+}`n1400{+}`n1500{+}`n1600{+}`n
 
-:*?:kataware!@::`t0200{+}`n0330{+}`n0530{+}`n0730{+}`n0930{+}`n1140{+}`n1330{+}`n1530{+}`n1740{+}`n
+;:*?:kataware!@::`t0200{+}`n0330{+}`n0530{+}`n0730{+}`n0930{+}`n1140{+}`n1330{+}`n1530{+}`n1740{+}`n
 
+:*?:kataware!@::`t0450{+}`n0730{+}`n0930{+}`n1140{+}`n1330{+}`n1530{+}`n1730{+}`n1830{+}`n2030{+}`n
 
-
-; ? hotstring will be triggered even when it is inside another word
-; * ending char (space, enter) not required to trigger
-; c case sensitive
 
 ; spreadsheet for physics and math
 :*?:filmcamera!@::{U+1F4FD}				;📽
 :*?:resolve!@::{U+1F4FD}				;📽
 :*?:video!@::{U+1F4F9}					;📹
 :*?:d6!@::{U+1F3B2}						;🎲
-:*?:pset!@::{U+1F3B2}					;🎲 a repeat of d6
+;:*?:pset!@::{U+1F3B2}					;🎲 a repeat of d6
 :*?:paper!@::{U+1F4C3}					;📃
 :*?:scroll!@::{U+1F4DC}					;📜
 
@@ -308,9 +315,11 @@ LAlt::LCtrl
 :*?:rapid!@::{U+1F40E}					;🐎
 :*?:whale!@::{U+1F433}					;🐳
 :*?:star!@::{U+1F31F}					;🌟
+:*?:jax!@::{U+1F31F}					;🌟
 :*?:bee!@::{U+1F41D}					;🐝
 :*?:apico!@::apico{U+1F41D}				;🐝
 :*?:wrench!@::{U+1F527}					;🔧
+:*?:mech!@::{U+1F527}					;🔧 ← mechanics, i.e. ffxiv
 :*?:tools!@::{U+1F6E0}					;🛠
 :*?:eagle!@::{U+1F985}					;🦅
 :*?:bullettrain!@::{U+1F684}			;🚄
@@ -323,9 +332,9 @@ LAlt::LCtrl
 :*?:anki!@::{U+1F4C7}					;📇
 :*?:galaxy!@::{U+1F30C}					;🌌
 :*?:package!@::{U+1F4E6}				;📦
-:*?:draw!@::{U+1F4E6}					;📦
+:*?:box!@::{U+1F4E6}					;📦
+:*?:boxes!@::{U+1F4E6}{U+00B2}			;📦²
 :*?:rocket!@::{U+1F680}					;🚀
-:*?:mouse!@::{U+1F42D}					;🐭
 :*?:steak!@::{U+1F969}					;🥩
 :*?:butter!@::{U+1F9C8}					;🧈
 :*?:piano!@::{U+1F3B9}					;🎹
@@ -339,8 +348,8 @@ LAlt::LCtrl
 :*?:egg!@::{U+1F95A}					;🥚
 :*?:rabbit!@::{U+1F407}					;🐇
 :*?:discipline!@::{U+1F4FF}				;📿
-:*?:beads!@::{U+1F4FF}					;📿
-:*?:war!@::{U+1FA96}					;🪖
+:?:dis!@::{U+1F4FF}						;📿
+;:*?:war!@::{U+1FA96}					;🪖 → 🪓
 :*?:credit!@::{U+1F4B3}					;💳
 :*?:buy!@::{U+1F4B3}					;💳
 :*?:purchase!@::{U+1F4B3}				;💳
@@ -356,6 +365,7 @@ LAlt::LCtrl
 :*?:lightbulb!@::{U+1F4A1}				;💡
 :*?:abacus!@::{U+1F9EE}					;🧮
 :*?:versus!@::{U+1F19A}					;🆚
+:*?:vs!@::{U+1F19A}						;🆚
 :*?:icecube!@::{U+1F9CA}				;🧊
 :*?:openbook!@::{U+1F4D6}				;📖
 :*?:books!@::{U+1F4DA}					;📚
@@ -372,9 +382,11 @@ LAlt::LCtrl
 :*?:sun!@::{U+2600}{U+FE0F}				;☀
 :*?:daily!@::{U+1F324}{U+FE0F}			;🌤️
 :*?:warcry!@::{U+1FAB6}					;🪶
+:*?:journal!@::{U+1FAB6}				;🪶
 :*?:feather!@::{U+1FAB6}				;🪶
 :*?:candle!@::{U+1F56F}					;🕯
-:*?:investigate!@::{U+1F50E}			;🔎
+:*?:investigate!@::{U+1F50D}			;🔍
+:*?:lookinto!@::{U+1F50E}				;🔎
 :*?:coin!@::{U+1FA99}					;🪙
 :*?:gold!@::{U+1FA99}					;🪙
 :*?:atom!@::{U+269B}					;⚛
@@ -393,6 +405,7 @@ LAlt::LCtrl
 :*?:bank!@::{U+1F3E6}					;🏦
 :*?:acro!@::{U+1F3DB}					;🏛
 :*?:history!@::{U+1F3DB}				;🏛
+:*?:philo!@::{U+1F3DB}					;🏛, for philosophy
 :*?:beetle!@::{U+1FAB2}					;🪲
 :*?:grub!@::{U+1F41B}					;🐛
 ;:*?:ladybug!@::{U+1F41E}				;🐞 collision with discordBug
@@ -402,16 +415,18 @@ LAlt::LCtrl
 :*?:shophie!@::{U+1F3E0}				;🏠
 :*?:tohru!@::{U+1F699}					;🚙
 :*?:broom!@::{U+1F9F9}					;🧹
+:*?:clean!@::{U+1F9F9}					;🧹
 :*?:aerry!@::{U+1F437}					;🐷
 :*?:fates!@::{U+269C}{U+FE0F}			;⚜️
+:*?:engage!@::{U+269C}{U+FE0F}			;⚜️
 :*?:moon!@::{U+1F31C}					;🌜
 :*?:leopard!@::{U+1F406}				;🐆
-:*?:tiger!@::{U+1F405}					;🐅
-:*?:tiggy!@::{U+1F42F}					;🐅
-:*?:winry!@::{U+1F405}					;🐯
+:*?:tiger!@::{U+1F42F}					;🐯
+:*?:winry!@::{U+1F405}					;🐅
+:*?:tiggy!@::{U+1F405}					;🐅
 :*?:link!@::{U+1F517}					;🔗
-:*?:tc!@::{U+22BC}{U+1D57}{U+1D9C}		;⊼ᵗᶜ
-:*?:barber!@::{U+1F488}					;💈
+:*:tc!@::{U+22BC}{U+1D57}{U+1D9C}		;⊼ᵗᶜ
+:*?:bearcut!@::{U+1F488}				;💈
 :*?:temper!@::{U+2744}{U+FE0F}			;❄️
 ;:*?:log!@::{U+1FAB5}					;🪵
 :*?:rock!@::{U+1FAA8}					;🪨
@@ -419,24 +434,28 @@ LAlt::LCtrl
 :*?:igel!@::{U+1F994}					;🦔
 :*?:cody!@::{U+1F994}					;🦔
 :*?:wave!@::{U+1F30A}					;🌊
-:*?:drop!@::{U+1F4A7}					;💧
-:*?:two!@::{U+1F6B8}					;🚸
-:*?:shield!@::{U+1F6E1}					;🛡
-:*?:tears!@::{U+1F6E1}					;🛡 ←tears of the kingdom
-:*?:aoe4!@::{U+1F6E1}{U+2074}			;🛡⁴
+:*?:compress!@::{U+1F30A}				;🌊
+:*?:water!@::{U+1F4A7}					;💧
+:*?:hydrate!@::{U+1F4A7}				;💧
+:*?:childrenxing!@::{U+1F6B8}			;🚸
+:*?:shield!@::{U+1F6E1}{U+FE0F}			;🛡️
+:*?:tankb!@::{U+1F6E1}{U+FE0F}			;🛡 ←tankbuster
+:*?:tears!@::{U+1F6E1}{U+FE0F}			;🛡 ←tears of the kingdom
+:*?:aoe4!@::{U+1F6E1}{U+FE0F}{U+2074}	;🛡⁴
 :*?:sage!@::{U+2728}					;✨
 :*?:sparkle!@::{U+2728}					;✨
 :*?:dust!@::{U+2728}					;✨
 :*?:warning!@::{U+26A0}{U+FE0F}			;⚠
 :*?:bear!@::{U+1F43B}					;🐻
 :*?:bears!@::{U+1F43B}{U+00B2}			;🐻²
+:*?:kids!@::{U+1F43B}{U+00B3}			;🐻³
 :*?:panda!@::{U+1F43C}					;🐼
 :*?:polar!@::{U+1F43B}{U+200D}{U+2744}{U+FE0F} ;🐻‍❄️
 :*?:magnet!@::{U+1F9F2}					;🧲
 :*?:phone!@::{U+260E}					;☎
 :*?:call!@::{U+260E}					;☎
 :*?:network!@::{U+1F4F6}				;📶
-:*?:wind!@::{U+1F4A8}					;💨
+:*?:blow!@::{U+1F4A8}					;💨
 :*?:feature!@::{U+1F3D7}{U+FE0F}		;🏗
 :*?:repair!@::{U+1F527}					;🔧
 :*?:unlock!@::{U+1F513}					;🔓
@@ -446,12 +465,13 @@ LAlt::LCtrl
 :*?:triangle!@::{U+1F4D0}				;📐
 :*?:proof!@::{U+1F4D0}					;📐
 :*?:nib!@::{U+2712}{U+FE0F}				;✒
+:*?:procreate!@::{U+2712}{U+FE0F}		;✒
 :*?:fpen!@::{U+1F58B}					;🖋
 :*?:ballpoint!@::{U+1F58A}				;🖊
 :*?:chat!@::{U+1F4AC}					;💬
 :*?:thought!@::{U+1F4AD}				;💭
 :*?:dungeon!@::{U+26D3}					;⛓
-:*?:water!@::{U+1F4A6}					;💦
+:*?:sweat!@::{U+1F4A6}					;💦
 :*?:food!@::{U+1F35C}					;🍜
 :*?:meal!@::{U+1F35C}					;🍜
 :*?:ducati!@::{U+1F3CD}					;🏍
@@ -459,7 +479,7 @@ LAlt::LCtrl
 :*?:petri!@::{U+1F9EB}					;🧫
 :*?:bio!@::{U+1F9EB}					;🧫
 :*?:research!@::{U+1F52C}				;🔬
-:*?:review!@::{U+1F52C}					;🔬
+:*?:review!@::{U+1F50E}					;🔎
 :*?:alembic!@::{U+2697}					;⚗
 :*?:syringe!@::{U+1F489}				;💉
 :*?:practice!@::{U+1F94B}				;🥋
@@ -470,6 +490,7 @@ LAlt::LCtrl
 :*?:disc!@::{U+1F94F}					;🥏 
 :*?:warning!@::{U+26A0}					;⚠
 :*?:eggplant!@::{U+1F346}				;🍆
+:*?:epl!@::{U+1F346}					;🍆
 :*?:anatomy!@::{U+1FAC0}				;🫀
 :*?:headphones!@::{U+1F3A7}				;🎧
 :*?:globeafrica!@::{U+1F30D}			;🌍
@@ -489,17 +510,18 @@ LAlt::LCtrl
 :*?:new!@::{U+1F530}					;🔰
 :*?:lv!@::{U+1F6E9}.{U+1F4F9}			;🛩.📹
 :*?:lp!@::{U+1F6E9}.{U+1F94B}			;🛩.🥋
-:*?:lr!@::{U+1F6E9}.{U+1F916}			;🛩.🤖
+:?:lr!@::{U+1F6E9}.{U+1F916}			;🛩.🤖
 :*?:ln!@::{U+1F6E9}.{U+2712}			;🛩.✒
 :*?:ls!@::{U+1F6E9}.{U+1F3EB}			;🛩.🏫
 :*?:cs!@::{U+1F6E9}.{U+1F3EB}			;🛩.🏫
 :*?:biov!@::{U+1F9EB}.{U+1F4F9}			;🧫.📹
 :*?:jungle!@::{U+1F33F}					;🌿
-:*?:squirrel!@::{U+1F43F}				;🐿
+:*?:squirrel!@::{U+1F43F}{U+FE0F}		;🐿️
 :*?:bandaid!@::{U+1FA79}				;🩹
 :*?:hour!@::{U+231B}					;⌛
-:*?:key!@::{U+1F511}					;🔑
+:*:key!@::{U+1F511}						;🔑
 :*?:factory!@::{U+1F3ED}				;🏭
+:*?:task!@::{U+1F3ED}					;🏭
 :*?:gear!@::{U+2699}{U+FE0F}			;⚙
 :*?:cog!@::{U+2699}{U+FE0F}				;⚙
 :*?:thread!@::{U+1F9F5}					;🧵
@@ -513,8 +535,8 @@ LAlt::LCtrl
 :*?:ighq!@::{U+1F3E8}					;🏨
 :*?:hill!@::{U+1F3D4}					;🏔
 :*?:mic!@::{U+1F399}					;🎙
-:*?:discord!@::{U+1F399}				;🎙
-:*?:podcast!@::{U+1F399}				;🎙
+:*?:discord!@::{U+1F399}{U+FE0F}		;🎙
+:*?:podcast!@::{U+1F399}{U+FE0F}		;🎙
 :*?:ighq!@::{U+1F3E8}					;🏨
 :*?:banana!@::{U+1F34C}					;🍌
 :*?:nuts!@::{U+1F95C}					;🥜
@@ -526,6 +548,7 @@ LAlt::LCtrl
 :*?:general!@::{U+1F396}{U+FE0F}		;🎖️
 :*?:liran!@::Liran{U+1F396}{U+FE0F}		;🎖️Liran
 :*?:hr!@::{U+1F3E1}.{U+1F52C}			;🏡.🔬
+:*:cr!@::{U+1F4B3}.{U+1F52C}			;💳.🔬
 :*?:construct!@::{U+1F6A7}				;🚧
 :*?:wolf!@::{U+1F43A}					;🐺
 :*?:skunk!@::{U+1F9A8}					;🦨
@@ -536,7 +559,7 @@ LAlt::LCtrl
 :*:punt!@::{U+1F3C8}					;🏈
 :*?:antipunt!@::{U+2755}{U+1F3C8}		;❕🏈 also see 'gp' for 'good play'
 :*?:gp!@::{U+1F3C5}						;🏅 good play! opposite of punt 🏈
-:;*?:verified!@::{U+1F993}				;🦓
+;:*?:verified!@::{U+1F993}				;🦓
 :*?:deal!@::{U+1F98C}					;🦌
 :*?:check!@::{U+2714}{U+FE0F}			;✔️
 :*?:knife!@::{U+1F52A}					;🔪
@@ -546,7 +569,8 @@ LAlt::LCtrl
 :*?:dia!@::{U+1F537}					;🔷
 :*?:falafel!@::{U+1F9C6}				;🧆
 ;:*?:done!@::{U+2611}{U+FE0F}			;☑️
-:*?:done!@::{U+23F9}{U+FE0F}			;⏹️
+;:*?:done!@::{U+23F9}{U+FE0F}			;⏹️
+:*?:done!@::{U+274E}					;❎
 :*?:brainstorm!@::{U+1F329}{U+FE0F}		;🌩️
 :*?:log!@::{U+1FAB5}					;🪵
 :*?:logging!@::{U+1FA9A}				;🪚
@@ -575,8 +599,7 @@ LAlt::LCtrl
 :*?:dragon!@::{U+1F409}					;🐉
 :*?:dragonhead!@::{U+1F432}				;🐲
 :*?:wheel!@::{U+1F6DE}					;🛞
-:*?:sleep!@::{U+1F4A4}					;💤
-:*?:nap!@::{U+1F4A4}					;💤
+:*?:zzz!@::{U+1F4A4}					;💤
 :*?:fish!@::{U+1F420}					;🐠
 :*?:shark!@::{U+1F988}					;🦈
 :*?:ring!@::{U+1F48D}					;💍
@@ -590,36 +613,252 @@ LAlt::LCtrl
 :*?:poop!@::{U+1F4A9}					;💩
 :*?:door!@::{U+1F6AA}					;🚪
 :*?:bed!@::{U+1F6CC}					;🛌
+:*?:nap!@::{U+1F6CC}					;🛌
 :*?:recycle!@::{U+267B}					;♻
 :*?:notes!@::{U+1F4DD}					;📝
 :*?:toilet!@::{U+1F6BD}					;🚽
+:*?:toilets!@::{U+1F6BD}{U+00B9}		;🚽¹
 :*?:hospital!@::{U+1F3E5}				;🏥
 :*?:lovehotel!@::{U+1F3E9}				;🏩
+:*?:glasses!@::{U+1F453}				;👓
+;:*?:tab!@::{tab}						;	
+:*?:breath!@::{U+1F32C}{U+FE0F}			;🌬️
+:*?:blow!@::{U+1F32C}{U+FE0F}			;🌬️
+:*?:voiceamp!@::{U+1F507}				;🔇
+:*?:redexcl!@::{U+2757}					;❗
+:*?:excl!@::{U+2755}					;❕
+:*?:clover!@::{U+1F340}					;🍀
+:*?:blood!@::{U+1FA78}					;🩸
+:*?:dolphin!@::{U+1F42C}				;🐬
+:*?:top!@::{U+1F51D}					;🔝
+:*?:rat!@::{U+1F400}					;🐀
+:*?:pepper!@::{U+1F336}{U+FE0F}			;🌶️
+:*?:tomato!@::{U+1F345}					;🍅
+:*?:ram!@::{U+1F40F}					;🐏
+:*?:goat!@::{U+1F410}					;🐐
+:*?:ewe!@::{U+1F411}					;🐑
+:*?:soap!@::{U+1F9FC}					;🧼
+:*?:dishes!@::{U+1F9FD}					;🧽
+:*?:sponge!@::{U+1F9FD}					;🧽
+:*?:pick!@::{U+26CF}					;⛏
+:*?:leaf!@::{U+1F341}					;🍁
+:*?:maple!@::{U+1F341}					;🍁
+:*?:flutter!@::{U+1F343}				;🍃
+:*?:wind!@::{U+1F343}					;🍃
+:*?:beer!@::{U+1F37A}					;🍺
+:*?:draft!@::{U+1F992}					;🦒
+:*?:dr!@::{U+1F992}{U+2190}{U+1F50E}	;🦒←🔎
+:*?:dr!@::{U+1F992}{U+2190}{U+1F50E}	;🦒←🔎
+:*?:tumblr!@::{U+1F377}					;🍷
+:*?:paint!@::{U+1F58C}{U+FE0F}			;🖌️
+:*?:diaper!@::{U+1F9F7}					;🧷
+:*?:trigger!@::{U+1F52B}				;🔫
+:*?:ruler!@::{U+1F4CF}					;📏
+:*?:mail!@::{U+1F4EB}					;📫
+:*?:soup!@::{U+1F372}					;🍲
+:*?:levelup!@::{U+1F199}				;🆙
+:*?:map!@::{U+1F5FA}{U+FE0F}			;🗺️
+:*?:jump!@::{U+1F998}					;🦘
+:*?:saw!@::{U+1FA9A}					;🪚
+:*?:guitar!@::{U+1F3B8}					;🎸
+:*?:compose!@::{U+1F3BC}				;🎼
 
+; 2024
+:*?:dutch!@::{U+1FAD5}					;🫕
+:*?:nanamo!@::{U+1FAD5}					;🫕
+:*?:movie!@::{U+1F4FD}{U+FE0F}			;📽️
+:*?:dvre!@::{U+1F4FD}{U+FE0F}			;📽️
+:*?:gift!@::{U+1F381}					;🎁
+:*?:redenv!@::{U+1F9E7}					;🧧
+:*?:greens!@::{U+1F96C}					;🥬
+:*?:veggies!@::{U+1F96C}				;🥬
+:*?:xiv!@::{U+1F48E}					;💎
+:*?:xivr!@::{U+1F48E}.{U+1F52C}			;💎.🔬
+:*?:xivd!@::{U+1F48E}.{U+26D3}			;💎.⛓
+:*?:clip!@::{U+1F4CB}					;📋
+:*?:wust!@::w{U+00FC}sthof				;wüsthof
+:*?:enso!@::ens{U+014D}					;ensō
+:*?:straw!@::{U+1F964}					;🥤
+:*?:fan!@::{U+1FAAD}					;🪭
+:*?:tree!@::{U+1F333}					;🌳
+:*?:forest!@::{U+1F38B}					;🎋
+:*?:cone!@::{U+1F366}					;🍦
+:*?:shiro!@::{U+1F3EF}					;🏯
+:*?:callout!@::{U+1F4E2}				;📢
+:*?:ssue!@::{U+1F373}					;🍳
+:*?:bubble!@::{U+1FAE7}					;🫧
+:*?:lobster!@::{U+1F99E}				;🦞
+:*?:crab!@::{U+1F980}					;🦀
+:*?:angry!@::{U+1F4A2}					;💢
+:*?:tnt!@::{U+1F9E8}					;🧨
+:*?:bomb!@::{U+1F4A3}					;💣
+:*?:explode!@::{U+1F4A5}				;💥
+:*?:balloon!@::{U+1F388}				;🎈
+:*?:dart!@::{U+1F3af}					;🎯
+:*?:kite!@::{U+1Fa81}					;🪁
+:*?:popcorn!@::{U+1F37F}				;🍿
+:*?:war!@::{U+1FA93}					;🪓
+:*?:refract!@::{U+1F36D}				;🍭 → U+1F308 is rainbow 🌈
+:*?:return!@::{U+1F519}					;🔙
+:*?:heal!@::{U+2695}{U+FE0F}			;⚕️
+:*?:onion!@::{U+1F9C5}					;🧅
+:*?:yc!@::{U+6CB9}{U+83DC}				;油菜
+:*?:shinto!@::{U+26E9}{U+FE0F}			;⛩️
+:*?:honk!@::{U+1FABF}					;🪿
+:*?:battery!@::{U+1F50B}				;🔋
+:*?:charge!@::{U+1FAAB}					;🪫
+:*?:read!@::{U+1F4F0}					;📰
+:*?:roll!@::{U+1F5DE}{U+FE0F}			;🗞️
+:*?:turkey!@::{U+1F983}					;🦃
+
+:*?:squeakies!@::{U+1F42D}				;🐭
+:*?:mouse!@::{U+1F5B1}{U+FE0F}			;🖱️
+:*?:rstretch!@::{U+1F3F3}{U+FE0F}{U+200D}{U+1F308}{U+1F9D8}{U+1F3FD} ;🏳️‍🌈🧘🏽
+:*?:stand!@::{U+1F9CD}{U+1F3FD}{U+200D}{U+2642}{U+FE0F} ;🧍🏽‍♂️
+
+:*?:zero!@::{U+30}{U+FE0F}{U+20E3}		;0️⃣
+:*?:one!@::{U+31}{U+FE0F}{U+20E3}		;1️⃣
+:*?:two!@::{U+32}{U+FE0F}{U+20E3}		;2️⃣
+:*?:three!@::{U+33}{U+FE0F}{U+20E3}		;3️⃣
+:*?:four!@::{U+34}{U+FE0F}{U+20E3}		;4️⃣
+:*?:five!@::{U+35}{U+FE0F}{U+20E3}		;5️⃣
+:*?:six!@::{U+36}{U+FE0F}{U+20E3}		;6️⃣
+:*?:seven!@::{U+37}{U+FE0F}{U+20E3}		;7️⃣
+:*?:eight!@::{U+38}{U+FE0F}{U+20E3}		;8️⃣
+:*?:nine!@::{U+39}{U+FE0F}{U+20E3}		;9️⃣
+:*?:ten!@::{U+1F51F}					;🔟
+:*?:oncurve!@::{U+2934}{U+FE0F}			;⤴️
+
+
+:*?:dtc!@::{U+6D1E}{U+5EAD}{U+6625}		;洞庭春
+:*?:xbc!@::{U+5C0F}{U+767D}{U+83DC}		;小白菜
+:*?:kxc!@::{U+7A7A}{U+5FC3}{U+83DC}		;空心菜
+:*?:tonghao!@::{U+833C}{U+84BF}			;茼蒿
+
+
+
+; chrome bookmarks sidebar
+#If WinActive("ahk_exe chrome.exe") 
+	F2::Send {F10}{Left}{Left}{Space}
+#If
 
 ; winry's logging sheet warcry
 ::backtodesk::
-Send, !i
-Sleep, 100
-Send, rr
-Send, ^y
-Send, ^y
-Send, ^y
-Send, ^y
-Sleep, 100
-Send, {Down}
-Sleep, 100
-Send, {Down}
-Sleep, 100
-Send, {Down}
-Sleep, 100
-Send, {Down}
-Sleep, 100
-Send, {Down}
-Sleep, 100
-SendInput Warcry{Up}Break and Water Timer{up}Water {+} Gargle{Up}Logging{Up}Awareness{Up}Discord{Up}
+	Send, !i
+	Sleep, 750
+	Send, rr
+	Send, ^y
+	Send, ^y
+	Send, ^y
+	Send, ^y
+	Sleep, 300
+	Send, {Down}
+	Sleep, 300
+	Send, {Down}
+	Sleep, 300
+	Send, {Down}
+	Sleep, 300
+	Send, {Down}
+	Sleep, 300
+	Send, {Down}
+	Sleep, 300
+	SendInput Warcry{Up}Break and Water Timer{up}Water {+} Gargle{Up}Logging{Up}Awareness{Up}Discord{Up}
+return
+; cody's logging sheet warcry
+::hoggydesk::
+    Send, !i
+    Sleep, 500
+    Send, rr
+    Send, ^y
+    Send, ^y
+    Send, ^y
+    Send, ^y
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    SendInput Warcry {U+1F399}{U+FE0F} {+} Proof Prep {U+1F64C}{U+1F3FE}{U+1FA91}{U+1FAB5}{U+1F43E}{U+1F4A7}{U+1F99C}{Up}
+    SendInput Water Break {Asc 0187} Timer {Asc 0187} Check Mat {Up}
+    SendInput Logging{Up}
+    SendInput Awareness{up}
+    Send, Proofreading & Awareness: 
+    Send, ^b
+    Send, {space}30{+}
+    Send, ^b
+    Send, s
+    SendInput {up}Break
+    Send, {enter}{down}
+    Sleep, 100
+    Send, {right}
+    Sleep, 100
+    Send, {right}
 return
 
+; cody's logging sheet warcry for morning and night chores
+::hoggychores::
+    Send, !i
+    Sleep, 100
+    Send, rr
+    Send, ^y
+    Send, ^y
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    SendInput Warcry {U+1F399}{U+FE0F} {+} Proof Prep {U+1FA91}{U+1FAB5}{U+1F43E}{U+1F4A7}{U+1F99C}{Up}
+    SendInput Water Break {Asc 0187} Timer{Up}Logging{up}
+    Send, {enter}{down}
+    Sleep, 100
+    Send, {right}
+    Sleep, 100
+    Send, {right}
+return
+
+; cody's logging sheet warcry for analysis
+::hoggyanalysis::
+    Send, !i
+    Sleep, 500
+    Send, rr
+    Send, ^y
+    Send, ^y
+    Send, ^y
+    Send, ^y
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    Send, {Down}
+    Sleep, 100
+    SendInput Warcry {U+1F399}{U+FE0F} {+} Proof Prep {U+1F64C}{U+1F3FE}{U+1FA91}{U+1FAB5}{U+1F43E}{U+1F4A7}{U+1F99C}{Up}
+    SendInput Water Break {Asc 0187} Timer{Up}Analysis{up}
+    Send, Proofreading & Awareness: 
+    Send, ^b
+    Send, {space}30{+}
+    Send, ^b
+    Send, s
+    SendInput {up}Awareness
+    SendInput {up}Break
+    Send, {enter}{down}
+    Sleep, 100
+    Send, {right}
+    Sleep, 100
+    Send, {right}
+return
 
 
 ; ask GPT to make !@# do !@ but with ````{left}{U+1F}{right}
@@ -664,10 +903,17 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 ; discord markdown code span emojis 
 :*?:poo!@::````{left}{U+1F4A9}{right}		;`💩`
 :*?:byte!@::````{left}{U+1F3ED}{right}		;`🏭`
+:*?:kiw!@::````{left}{U+1F95D}{right}		;`🏭`
+:*?:lecture!@::````{left}{U+1F4F9}{right}	;`📹`
+:*?:docu!@::````{left}{U+1F4C3}{right}		;`📃`
 :*?:commit!@::````{left}{U+1F948}{right}	;`🥈`
+:*?:bit!@::````{left}{U+1F949}{right}		;`🥉`
+:*?:bitcom!@::````{left}{U+1F948}{U+1F949}{right}	;`🥈🥉`
 :*?:bit!@::````{left}{U+1F949}{right}		;`🥉`
 :*?:bug!@::````{left}{U+1F41B}{right}		;`🐛`
 :*?:ank!@::````{left}{U+1F4C7}{right}		;`📇`
+
+:*?:pset!@::````{left}{U+1F3B2}{right}		;`📇`
 
 
 :*?:eyebreak!@::eye{U+1F9D8}{U+1F3FD}{U+200D} ;eye🧘🏽‍
@@ -676,22 +922,41 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 :*?:bearcon!@::{U+1F43B}.{U+1F3D7}		;🐻.🏗
 
 
-:*?:trademark!@::{U+2122}				;™
-:*?:ukraine!@::{U+1F1FA}{U+1F1E6}		;🇺🇦
-:*?:masterclass!@::{U+1F13C}{U+1F132}	;🄼🄲
-:*?:lh!@::lol.himura1rk					;
-:*?:deerp!@::deerliberatepractice		;
-:*?:kf!@::kiwifruitiwi					;
-:*?:kao!@::kaorufruitaru				;
-:*?:c.a!@::chibi.aegis{+}				;chibi.aegis+
-:*?:z.t+!@::zane.tian{+}				;zane.tian+
-:*?:z.t!@::zane.tian@gmail.com			;zane.tian@gmail.com
-:*?:c.b!@::cody.bearba@gmail.com		;cody.bearba@gmail.com
-:*?:w.t!@::winry.tian@gmail.com			;winry.tian@gmail.com
-:*?:t.t!@::triforce.tofu@gmail.com		;triforce.tofu@gmail.com
-:*?:@@g::@gmail.com						;@gmail.com
+:*?:trademark!@::{U+2122}						;™
+:*?:ukraine!@::{U+1F1FA}{U+1F1E6}				;🇺🇦
+:*?:masterclass!@::{U+1F13C}{U+1F132}			;🄼🄲
+:*?:lh!@::lol.himura1rk							;
+:*?:deerp!@::deerliberatepractice				;
+:*?:kf!@::kiwifruitiwi							;
+:*?:kao!@::kaorufruitaru						;
+:*?:kyr!@::kyruru@gmail.com						;kyruru@gmail.com
+:*?:aer!@::aeruru@gmail.com						;aeruru@gmail.com
+:*?:ca+::chibi.aegis{+}@gmail.com{left 10}		;chibi.aegis+@gmail.com
+:*?:cr+::chibi.rosalyn{+}@gmail.com{left 10}	;chibi.rosalyn+@gmail.com
+:*?:car+::chibi.arky{+}@gmail.com{left 10}		;chibi.arky+@gmail.com
+:*?:zt+::zane.tian{+}@gmail.com{left 10}		;zane.tian+@gmail.com
+:*?:zta!@::zane.tian{+}acceptance@gmail.com		;zane.tian+@gmail.com
+:*?:zt!@::zane.tian@gmail.com					;zane.tian@gmail.com
+:*?:cb!@::cody.bearba@gmail.com					;cody.bearba@gmail.com
+:*?:wt!@::winry.tian@gmail.com					;winry.tian@gmail.com
+:*?:tt!@::triforce.tofu@gmail.com				;triforce.tofu@gmail.com
+:*?:@@g::@gmail.com								;@gmail.com
+
+:*?:c.a::chibi.aigis							;chibi.aigis
+
 
 :*?:jc!@::**JackCompiler**				;**JackCompiler**
+:*?:jcbat::.{/}JackCompiler.bat{space}	;./JackCompiler.bat 
+
+:*?:osComp!@::
+	SendRaw, ./JackCompiler.bat ./OSTest/*
+	return
+
+:*?:osErase!@::
+	SendRaw, find ./OSTest -type f -name "*.vm" -exec rm -f {} +
+	return
+
+
 :*?:totk!@::Tears of the Kingdom		;Tears of the Kingdom
 :*?:ka!@::Khan Academy					;Khan Academy
 
@@ -699,6 +964,23 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 :*?:pfkm!@::Pathfinder Kingmaker
 :*?:dvr!@::davinci resolve
 :*?:hk!@::hollow knight
+
+
+; magic arena
+:*?:arena!@::{U+1F9B9}{U+1D2C}{U+1D3F}{U+1D31}{U+1D3A}{U+1D2C} 	;🦹ᴬᴿᴱᴺᴬ
+:*?:ltr!@::{U+1F48D}{U+1D38}{U+1D40}{U+1D3F}					;💍ᴸᵀᴿ
+:*?:woe!@::{U+1F341}{U+1D42}{U+1D3C}{U+1D31}					;🍁ᵂᴼᴱ
+:*?:wot!@::{U+1F342}{U+1D42}{U+1D3C}{U+1D40}					;🍂ᵂᴼᵀ
+:*?:mkm!@::{U+1F5E1}{U+FE0F}{U+1D39}{U+1D37}{U+1D39}			;🗡️ᴹᴷᴹ
+:*?:crim!@::criminologists
+:*?:otj!@::{U+1F9B9}{U+200D}{U+2642}{U+FE0F}{U+1D3C}{U+1D40}{U+1D36} ;🦹‍♂️ᴼᵀᴶ
+
+; this capital C is too large ᶫᴸꟲᴵᶦ
+:*:ix!@::{U+1F9ED}{U+1D38}{U+A7F2}{U+1D35} 					;🧭ᴸꟲᴵ
+:*?:lci!@::{U+1F9ED}{U+029F}{U+1D04}{U+026A}				;🧭ʟᴄɪ
+
+:*?:mahz::ma.himura1rk
+:*?:wm!@::{U+1F342}{U+1D39}{U+02B8}{U+1D40}{U+1D34}				;🍂ᴹʸᵀᴴ
 
 
 ; magic arena set:ltr
@@ -720,7 +1002,13 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 :*?:dune!@::D{U+00FA}nedain				;Dúnedain
 :*?:troll!@::Troll of Khazad-d{U+00FB}m	;Troll of Khazad-dûm
 
+; fire emblem: engage
+:*?:celine!@::C{U+00E9}line				;Céline
+:*?:chloe!@::Chlo{U+00E9}				;Chloé
+:*?:rag!@::ragnar{U+00F6}k				;ragnarök
 ;:*?:rr!@::repairandrecharge			;repairandrecharge
+
+:*?:saute!@::saut{U+00E9}				;sauté
 
 
 
@@ -731,18 +1019,12 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 :*?:natural!@::{U+266E}				;♮
 
 
-:*?:wdis!@::winry{U+1F4FF}{U+2190}	;winry📿←
-:*?:cdis!@::cody{U+1F4FF}{U+2190}	;cody📿←
+:*?:wdis!@::{U+1F405}{U+2190}{U+1F4FF}		;🐅←📿
+:*?:cdis!@::{U+1F994}{U+2190}{U+1F4FF}		;🦔←📿
+;:*?:wdis!@::winry{U+1F4FF}{U+2190}			;winry📿←
+;:*?:cdis!@::cody{U+1F4FF}{U+2190}			;cody📿←
 
 :*?:walk!@::{U+1F6B6}{U+1F3FD}{U+200D}{U+2640}			;🚶🏽‍♀
-:*?:arena!@::{U+1F48D}{U+1D2C}{U+1D3F}{U+1D31}{U+1D3A}{U+1D2C} 	;💍ᴬᴿᴱᴺᴬ
-:*?:ltr!@::{U+1F48D}{U+1D38}{U+1D40}{U+1D3F}			;💍ᴸᵀᴿ
-:*?:woe!@::{U+1F341}{U+1D42}{U+1D3C}{U+1D31}			;🍁ᵂᴼᴱ
-:*?:mah!@::ma.himura1rk
-
-
-; st, th, rd, nd. avoids much bigger 'n' in lowercase
-:*?:woe!@::{U+1D42}{U+1D3C}{U+1D31}			;🍁ᵂᴼᴱ
 
 
 ; ⊼ [ᴛᴜʀɪɴɢ ᴄᴏᴍᴘʟᴇᴛᴇ]
@@ -752,6 +1034,7 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 
 ; medals
 :*?:goldmedal!@::{U+1F947}				;🥇
+:*?:oneshot!@::{U+1F947}				;🥇
 :*?:silvermedal!@::{U+1F948}			;🥈
 :*?:silver!@::{U+1F948}					;🥈
 :*?:bronzemedal!@::{U+1F949}			;🥉
@@ -812,18 +1095,39 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 	MsgBox %A_ComputerName%
 Return
 
-
-; disable teams shortcut
-#c::
-	if (A_ComputerName = "Elise")
-	    MsgBox, The strings are equal.
-	else
-	    MsgBox, %A_ComputerName% The strings are not equal.
-Return
-
 ; convert explorer into win+0 to access taskbar explorer
 #e::#0
 Return
+
+
+; disable teams shortcut
+#c::
+	;if (A_ComputerName = "Elise")
+	;    MsgBox, The strings are equal.
+	;else
+	;    MsgBox, %A_ComputerName% The strings are not equal.
+Return
+
+; disable feedback hub shortcut
+#f::
+Return
+
+; replace win+k display selection with win+tab if we're on the desktop
+#IfWinActive, ahk_exe explorer.exe
+#k::  ; When Win + K is pressed
+    Send, #{Tab}  ; Send Win + Tab
+Return
+#IfWinActive  ; End of block
+
+; replace win+k display selection with win+tab if we're in ST4
+; TODO: why doesn't this work? 🐛
+#IfWinActive, ahk_exe sublime_text.exe
+#k::
+    Send, #{Tab}  ; Send Win + Tab
+Return
+#IfWinActive  ; End of block
+
+
 
 ; convert shift+enter to ctrl+enter in discord to match google sheets!
 ; 
@@ -855,24 +1159,26 @@ if (A_ComputerName = "Elise") {
 Return
 
 ; replace two chars with '☒ ' in sublime text 4
-F1::
-if WinActive("ahk_exe sublime_text.exe") || WinActive("ahk_class SunAwtFrame") {
-	; MsgBox, F1 was pressed in ST4!
-	Send {BackSpace}
-	Send {BackSpace}
-	Send {U+2612}{space}
-} 
-Return
-
-; replace two chars with '☐ ' in sublime text 4
 ^F1::
 if WinActive("ahk_exe sublime_text.exe") || WinActive("ahk_class SunAwtFrame") {
 	; MsgBox, F1 was pressed in ST4!
 	Send {BackSpace}
 	Send {BackSpace}
-	Send {U+2610}{space}
+	Send {U+2612}{space}
+} else {
+    Send {F1}  ; Sends the F1 key press to other applications
 }
 Return
+
+; replace two chars with '☐ ' in sublime text 4
+; ^F1::
+; if WinActive("ahk_exe sublime_text.exe") || WinActive("ahk_class SunAwtFrame") {
+; 	; MsgBox, F1 was pressed in ST4!
+; 	Send {BackSpace}
+; 	Send {BackSpace}
+; 	Send {U+2610}{space}
+; }
+; Return
 
 
 #u::  		; replaces accessibility control panel shortcut. Y is available
