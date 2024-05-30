@@ -286,7 +286,7 @@ LAlt::LCtrl
 
 ;:*?:kataware!@::`t0200{+}`n0330{+}`n0530{+}`n0730{+}`n0930{+}`n1140{+}`n1330{+}`n1530{+}`n1740{+}`n
 
-:*?:kataware!@::`t0450{+}`n0730{+}`n0930{+}`n1140{+}`n1330{+}`n1530{+}`n1730{+}`n1830{+}`n2030{+}`n
+:*?:kataware!@::`t0330{+}`n0530{+}`n0730{+}`n0930{+}`n1140{+}`n1330{+}`n1530{+}`n1730{+}`n1830{+}`n
 
 
 ; spreadsheet for physics and math
@@ -384,6 +384,7 @@ LAlt::LCtrl
 :*?:warcry!@::{U+1FAB6}					;🪶
 :*?:journal!@::{U+1FAB6}				;🪶
 :*?:feather!@::{U+1FAB6}				;🪶
+:*?:reflect!@::{U+1FAB6}				;🪶
 :*?:candle!@::{U+1F56F}					;🕯
 :*?:investigate!@::{U+1F50D}			;🔍
 :*?:lookinto!@::{U+1F50E}				;🔎
@@ -710,6 +711,7 @@ LAlt::LCtrl
 :*?:read!@::{U+1F4F0}					;📰
 :*?:roll!@::{U+1F5DE}{U+FE0F}			;🗞️
 :*?:turkey!@::{U+1F983}					;🦃
+:*?:raccoon!@::{U+1F99D}				;🦝
 
 :*?:squeakies!@::{U+1F42D}				;🐭
 :*?:mouse!@::{U+1F5B1}{U+FE0F}			;🖱️
@@ -764,6 +766,7 @@ LAlt::LCtrl
 	Sleep, 300
 	SendInput Warcry{Up}Break and Water Timer{up}Water {+} Gargle{Up}Logging{Up}Awareness{Up}Discord{Up}
 return
+
 ; cody's logging sheet warcry
 ::hoggydesk::
     Send, !i
@@ -773,17 +776,17 @@ return
     Send, ^y
     Send, ^y
     Send, ^y
-    Sleep, 100
+    Sleep, 400
     Send, {Down}
-    Sleep, 100
+    Sleep, 400
     Send, {Down}
-    Sleep, 100
+    Sleep, 400
     Send, {Down}
-    Sleep, 100
+    Sleep, 400
     Send, {Down}
-    Sleep, 100
+    Sleep, 400
     Send, {Down}
-    Sleep, 100
+    Sleep, 400
     SendInput Warcry {U+1F399}{U+FE0F} {+} Proof Prep {U+1F64C}{U+1F3FE}{U+1FA91}{U+1FAB5}{U+1F43E}{U+1F4A7}{U+1F99C}{Up}
     SendInput Water Break {Asc 0187} Timer {Asc 0187} Check Mat {Up}
     SendInput Logging{Up}
@@ -796,9 +799,15 @@ return
     SendInput {up}Break
     Send, {enter}{down}
     Sleep, 100
-    Send, {right}
+    Send, {down}
     Sleep, 100
-    Send, {right}
+    Send, {down}
+    Sleep, 100
+    Send, {down}
+    Sleep, 100
+    Send, {left}
+    Sleep, 100
+    Send, {left}
 return
 
 ; cody's logging sheet warcry for morning and night chores
@@ -903,6 +912,8 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 ; discord markdown code span emojis 
 :*?:poo!@::````{left}{U+1F4A9}{right}		;`💩`
 :*?:byte!@::````{left}{U+1F3ED}{right}		;`🏭`
+:*?:prac!@::````{left}{U+1F94B}{right}		;`🥋`
+:*?:tip!@::````{left}{U+1F4A1}{right}		;`💡`
 :*?:kiw!@::````{left}{U+1F95D}{right}		;`🏭`
 :*?:lecture!@::````{left}{U+1F4F9}{right}	;`📹`
 :*?:docu!@::````{left}{U+1F4C3}{right}		;`📃`
@@ -972,8 +983,9 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 :*?:woe!@::{U+1F341}{U+1D42}{U+1D3C}{U+1D31}					;🍁ᵂᴼᴱ
 :*?:wot!@::{U+1F342}{U+1D42}{U+1D3C}{U+1D40}					;🍂ᵂᴼᵀ
 :*?:mkm!@::{U+1F5E1}{U+FE0F}{U+1D39}{U+1D37}{U+1D39}			;🗡️ᴹᴷᴹ
-:*?:crim!@::criminologists
 :*?:otj!@::{U+1F9B9}{U+200D}{U+2642}{U+FE0F}{U+1D3C}{U+1D40}{U+1D36} ;🦹‍♂️ᴼᵀᴶ
+:*?:blb!@::{U+1F341}{U+1D2F}{U+1D38}{U+1D2F}					;🍁ᴯᴸᴯ
+:*?:mh3!@::{U+1F419}{U+1D39}{U+1D34}{U+00B3}					;🐙ᴹᴴ³
 
 ; this capital C is too large ᶫᴸꟲᴵᶦ
 :*:ix!@::{U+1F9ED}{U+1D38}{U+A7F2}{U+1D35} 					;🧭ᴸꟲᴵ
@@ -1065,6 +1077,7 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 :*?:jsprint!@::console.log(``${{}{}}``){left 3}
 
 ;github
+:*?:u17!@::git add .; git commit -m "update 17L data"; git push
 :*?:glo!@::git log --oneline
 :*?:gds!@::git diff --staged
 :*?:gcm!@::git commit -m ""{left 1}
