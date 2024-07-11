@@ -116,7 +116,6 @@ LAlt::LCtrl
 
 :c*?:sigma!@::{U+03C3}				;σ
 :c*?:stdev!@::{U+03C3}				;σ
-:c*?:stats!@::{U+03C3}				;σ
 :c*?:Sigma!@::{U+03A3}				;Σ
 :*?:psi!@::{U+03C8}					;ψ
 :*?:phi!@::{U+03C6}					;ϕ
@@ -463,6 +462,7 @@ LAlt::LCtrl
 :*?:hammer!@::{U+1F528}					;🔨
 :*?:clips!@::{U+1F587}					;🖇
 :*?:paintbrush!@::{U+1F58C}				;🖌
+:*?:pct!@::{U+1F58C}					;🖌
 :*?:triangle!@::{U+1F4D0}				;📐
 :*?:proof!@::{U+1F4D0}					;📐
 :*?:nib!@::{U+2712}{U+FE0F}				;✒
@@ -639,7 +639,7 @@ LAlt::LCtrl
 :*?:goat!@::{U+1F410}					;🐐
 :*?:ewe!@::{U+1F411}					;🐑
 :*?:soap!@::{U+1F9FC}					;🧼
-:*?:dishes!@::{U+1F9FD}					;🧽
+:*?:dishes!@::{U+1F37D}{U+FE0F}			;🍽️
 :*?:sponge!@::{U+1F9FD}					;🧽
 :*?:pick!@::{U+26CF}					;⛏
 :*?:leaf!@::{U+1F341}					;🍁
@@ -703,6 +703,8 @@ LAlt::LCtrl
 :*?:return!@::{U+1F519}					;🔙
 :*?:heal!@::{U+2695}{U+FE0F}			;⚕️
 :*?:onion!@::{U+1F9C5}					;🧅
+:*?:ginger!@::{U+1FADA}					;🫚
+:*?:garlic!@::{U+1F9C4}					;🧄
 :*?:yc!@::{U+6CB9}{U+83DC}				;油菜
 :*?:shinto!@::{U+26E9}{U+FE0F}			;⛩️
 :*?:honk!@::{U+1FABF}					;🪿
@@ -712,6 +714,11 @@ LAlt::LCtrl
 :*?:roll!@::{U+1F5DE}{U+FE0F}			;🗞️
 :*?:turkey!@::{U+1F983}					;🦃
 :*?:raccoon!@::{U+1F99D}				;🦝
+:*?:stats!@::{U+1F4CA}					;📊
+:*?:dt!@::{U+1F305}						;🌅
+:*?:window!@::{U+1FA9F}					;🪟
+:*?:milk!@::{U+1F95B}					;🥛
+
 
 :*?:squeakies!@::{U+1F42D}				;🐭
 :*?:mouse!@::{U+1F5B1}{U+FE0F}			;🖱️
@@ -730,12 +737,15 @@ LAlt::LCtrl
 :*?:nine!@::{U+39}{U+FE0F}{U+20E3}		;9️⃣
 :*?:ten!@::{U+1F51F}					;🔟
 :*?:oncurve!@::{U+2934}{U+FE0F}			;⤴️
+:*?:onc!@::{U+2934}{U+FE0F}				;⤴️
 
 
 :*?:dtc!@::{U+6D1E}{U+5EAD}{U+6625}		;洞庭春
 :*?:xbc!@::{U+5C0F}{U+767D}{U+83DC}		;小白菜
 :*?:kxc!@::{U+7A7A}{U+5FC3}{U+83DC}		;空心菜
 :*?:tonghao!@::{U+833C}{U+84BF}			;茼蒿
+
+:*?:kur!@::kurzgesagt					;kurzgesagt
 
 
 
@@ -969,7 +979,8 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 
 
 :*?:totk!@::Tears of the Kingdom		;Tears of the Kingdom
-:*?:ka!@::Khan Academy					;Khan Academy
+:*?:khan!@::Khan Academy				;Khan Academy
+:*?:ka!@::{U+1F33A}						;🌺
 
 :*?:maa!@::man-at-arms
 :*?:pfkm!@::Pathfinder Kingmaker
@@ -1105,7 +1116,7 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 
 ; disable widget bar
 #w::
-	MsgBox %A_ComputerName%
+	MsgBox %A_ComputerName% disabled widget bar
 Return
 
 ; convert explorer into win+0 to access taskbar explorer

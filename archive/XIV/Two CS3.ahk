@@ -4,7 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
-#Include D:\Dropbox\ahk scripts\XIV\keybinds.ahk
+#Include C:\Users\kiwi\Dropbox\scripts\archive\XIV\keybinds.ahk
 
 InputBox, UserInput, Quantity, 2x CS3
 Loop, %UserInput%
