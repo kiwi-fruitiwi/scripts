@@ -18,27 +18,10 @@ SoundPlay *16
 ; 13 → chip
 
 
-winTitle = FINAL FANTASY XIV
-lag = 200
-buffDuration := 1500 + lag
-abilityDuration := 2500 + lag
-
-accept = {m}
-left = {o}
-
-muscleMemory = {q}
-manipulation = {CtrlDown}q{CtrlUp}
-basicTouch = {b}
-prudentTouch = {e}
-
-greatStrides = {CtrlDown}x{CtrlUp}
-innovation = {x}
-byregotsBlessing = {t}
-carefulSynth = {c}
-mastersMend = {CtrlDown}c{CtrlUp}
+#Include C:\Users\kiwi\Dropbox\scripts\craftKeys.ahk
 
 
-InputBox, UserInput, Quantity, 40 durability chondrite ingot
+InputBox, UserInput, iterations, craft → 40 durability chondrite ingot, , 300, 128
 Loop, %UserInput%
 {
 	; start the craft by pressing accept 4 times quickly
