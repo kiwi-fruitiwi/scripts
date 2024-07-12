@@ -23,41 +23,73 @@ lag = 200
 buffDuration := 1500 + lag
 abilityDuration := 2500 + lag
 
-accept = {Blind}{m}
-left = {Blind}{o}
+accept = {m}
+left = {o}
 
-carefulSynth = {c}
-mastersMend = {CtrlDown}c{CtrlUp}
 muscleMemory = {q}
 manipulation = {CtrlDown}q{CtrlUp}
+basicTouch = {b}
+prudentTouch = {e}
 
 greatStrides = {CtrlDown}x{CtrlUp}
 innovation = {x}
 byregotsBlessing = {t}
+carefulSynth = {c}
+mastersMend = {CtrlDown}c{CtrlUp}
 
 
-Controlsend,, %muscleMemory%, %winTitle%
-Sleep %abilityDuration%
+InputBox, UserInput, Quantity, 40 durability chondrite ingot
+Loop, %UserInput%
+{
+	; start the craft by pressing accept 4 times quickly
+	Loop, 4 
+	{
+		Controlsend,, %accept%, %winTitle%
+		Sleep 400
+	}
 
-Controlsend,, %manipulation%, %winTitle%
-Sleep %buffDuration%
+	; wait for synthesis dialog to pop up
+	Sleep 1000
 
-Loop, 4 {
-	Controlsend,, %carefulSynth%, %winTitle%
+	Controlsend,, %muscleMemory%, %winTitle%
 	Sleep %abilityDuration%
+
+	Controlsend,, %manipulation%, %winTitle%
+	Sleep %buffDuration%
+
+	Controlsend,, %basicTouch%, %winTitle%
+	Sleep %abilityDuration%
+
+	Loop, 9 {
+	    Controlsend,, %prudentTouch%, %winTitle%
+	    Sleep %abilityDuration%
+	}
+
+	; final touches: great strides, innovation, byregot's blessing
+	Controlsend,, %greatStrides%, %winTitle%
+	Sleep %buffDuration%
+
+	Controlsend,, %innovation%, %winTitle%
+	Sleep %buffDuration%
+
+	Controlsend,, %byregotsBlessing%, %winTitle%
+	Sleep abilityDuration
+
+	; final careful synth
+	Controlsend,, %carefulSynth%, %winTitle%
+	Sleep abilityDuration
+
+	; sleep at the end of the synth to allow time for the menu to load
+	Sleep 2000
 }
 
+#y::              
+    Send, ^s     ; To save a changed script
+    Sleep, 300     ; give it time to save the script
+    Reload
+    Return
 
-; final touches: great strides, innovation, byregot's blessing
-Controlsend,, %manipulation%, %winTitle%
-Sleep %buffDuration%
-Controlsend,, %manipulation%, %winTitle%
-Sleep %buffDuration%
-Controlsend,, %manipulation%, %winTitle%
-Sleep %buffDuration%
-
-#y::  			
-	Send, ^s 	; To save a changed script
-	Sleep, 300 	; give it time to save the script
-	Reload
-	Return
+;#z::Reload
+;#c:: 
+;	Controlsend,, %stop_macro%, %winTitle%
+;	Pause
