@@ -13,7 +13,7 @@ left = {o}
 
 muscleMemory = {q}
 manipulation = {CtrlDown}q{CtrlUp}
-basicTouch = {b}
+basicSynth = {b}
 prudentTouch = {e}
 prudentSynth = {1}
 groundwork = {v}

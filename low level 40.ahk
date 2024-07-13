@@ -21,7 +21,7 @@ SoundPlay *16
 #Include C:\Users\kiwi\Dropbox\scripts\craftKeys.ahk
 
 
-InputBox, UserInput, iterations, craft → 40 durability chondrite ingot, , 300, 128
+InputBox, UserInput, iterations, craft → 40dura low level craft, , 300, 128
 Loop, %UserInput%
 {
 	; start the craft by pressing accept 4 times quickly
@@ -40,7 +40,7 @@ Loop, %UserInput%
 	Controlsend,, %manipulation%, %winTitle%
 	Sleep %buffDuration%
 
-	Controlsend,, %basicTouch%, %winTitle%
+	Controlsend,, %basicSynth%, %winTitle%
 	Sleep %abilityDuration%
 
 	Loop, 9 {
@@ -56,11 +56,11 @@ Loop, %UserInput%
 	Sleep %buffDuration%
 
 	Controlsend,, %byregotsBlessing%, %winTitle%
-	Sleep abilityDuration
+	Sleep %abilityDuration%
 
 	; final careful synth
 	Controlsend,, %carefulSynth%, %winTitle%
-	Sleep abilityDuration
+	Sleep %abilityDuration%
 
 	; sleep at the end of the synth to allow time for the menu to load
 	Sleep 2000
