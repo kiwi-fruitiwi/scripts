@@ -20,7 +20,19 @@ LAlt::LCtrl
 #WheelUp::Volume_Up
 #WheelDown::Volume_Down
 
+; date time replacements for sublime text logging
+:*?:isod!@:: {
+	Send(FormatTime(A_NOW, "hh:mm tt dddd, MMMM dd, yyyy") . "`n")
+	Send(FormatTime(A_NOW, "[HHmm]") . "{U+2192}`t")
+}
 
+:*?:asdf!@:: {
+	Send("[" . FormatTime(A_NOW, "HHmm") . "]-`t")
+}
+
+:*?:fdsa!@:: {
+	Send("[?...]-`t")
+}
 
 
 ; ? means no beginning char is needed to trigger
@@ -32,8 +44,8 @@ LAlt::LCtrl
 
 
 
+
 ; github autocompletion
-;github
 :*?:u17!@::git add .; git commit -m "update 17L data"; git push
 :*?:glo!@::git log --oneline
 :*?:gds!@::git diff --staged
