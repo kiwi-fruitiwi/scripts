@@ -28,7 +28,7 @@ Loop, %UserInput%
 	Loop, 4 
 	{
 		Controlsend,, %accept%, %winTitle%
-		Sleep 700
+		Sleep 400
 	}
 
 	; wait for synthesis dialog to pop up
@@ -62,7 +62,7 @@ Loop, %UserInput%
 	Controlsend,, %mastersMend%, %winTitle%
 	Sleep %abilityDuration%
 
-	Loop, 3 {
+	Loop, 4 {
 		Controlsend,, %basicSynth%, %winTitle%
 		Sleep %abilityDuration%
 	}
