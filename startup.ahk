@@ -1115,9 +1115,7 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 
 
 ; disable widget bar
-#w::
-	MsgBox %A_ComputerName% disabled widget bar
-Return
+#w::Return
 
 ; convert explorer into win+0 to access taskbar explorer
 #e::#0
