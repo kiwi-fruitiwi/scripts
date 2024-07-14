@@ -1,4 +1,5 @@
 #Requires AutoHotkey v2.0
+; this is the ahk v2 version of startup.ahk, replaced 2024.July.14
 
 ; recommended for new scripts due to its superior speed and reliability
 SendMode("Input")  
