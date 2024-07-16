@@ -890,6 +890,17 @@ LAlt::LCtrl
 	}
 }
 
+; replace two chars with '☒ ' in sublime text 4 and intellij apps
+^F1:: {
+    if WinActive("ahk_exe sublime_text.exe") || WinActive("ahk_class SunAwtFrame") {
+        ; MsgBox("F1 was pressed in ST4!")
+        Send("{BackSpace}")
+        Send("{BackSpace}")
+        Send("{U+2612} ")
+    } else {
+        Send("{F1}")  ; Sends the F1 key press to other applications
+    }
+}
 
 ; TODO: hoggydesk macros
 

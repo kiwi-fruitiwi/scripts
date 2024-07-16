@@ -77,7 +77,6 @@ Loop, %UserInput%
     Reload
     Return
 
-;#z::Reload
 ;#c:: 
 ;	Controlsend,, %stop_macro%, %winTitle%
 ;	Pause

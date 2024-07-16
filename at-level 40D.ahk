@@ -8,8 +8,13 @@ SetWorkingDir(A_ScriptDir)
 
 ; from stackoverflow.com/questions/15706534/hotkey-to-restart-autohotkey-script
 #SingleInstance Force
-TraySetIcon("Shell32.dll", 13, 1)  ; tray icon!
-TrayTip("AutoHotKey", "Started", 1)
+
+; 31 → bottom left box
+; 35 → blue screen
+; 14 → globe
+; 13 → chip
+TraySetIcon("Shell32.dll", 13, 1)
+; TrayTip("AutoHotKey", "Started", 1)
 SoundPlay("*16")
 
 winTitle := "FINAL FANTASY XIV"
