@@ -57,7 +57,7 @@ enact(name) {
 	Sleep(delay)
 }
 
-n := InputBox("40 durability current level", "crafting bot 🤖", "w300 h95").value
+n := InputBox("endwalker collectible", "crafting bot 🤖", "w300 h95").value
 Loop n {
 	Loop 4 { 
 		enact("accept") 
@@ -67,26 +67,10 @@ Loop n {
 	Sleep 1000
 
 	; begin synthesis
-	enact("muscle memory")
-	enact("manipulation")
-	enact("prudent synthesis")
-
-	Loop 9 {
-		enact("prudent touch")
-	}
-
-	enact("prudent synthesis")
-
-	; final quality touches: great strides, innovation, byregot's blessing
-	enact("great strides")
-	enact("innovation")
-	enact("byregot's blessing")
-	
-	; master's mend → complete synthesis
-	enact("master's mend")
-	Loop 3 {
-		enact("basic synthesis")
-	}
+	enact("trained eye")
+	enact("veneration")
+	enact("groundwork")
+	enact("groundwork")
 
 	; sleep at the end of the synth to allow time for the menu to load
 	Sleep 2000

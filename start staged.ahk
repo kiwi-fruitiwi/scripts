@@ -35,7 +35,7 @@ LAlt::LCtrl
 	Send("[?...]-`t")
 }
 
-:*?:kataware!@::`t0505{+}`n0730{+}`n0930{+}`n1140{+}`n1330{+}`n1530{+}`n1730{+}`n1830{+}`n2030{+}`n
+:*?:kataware!@::`t0330{+}`n0530{+}`n0730{+}`n0930{+}`n1140{+}`n1330{+}`n1530{+}`n1730{+}`n1830{+}`n
 
 
 ; ? hotstring will be triggered even when it is inside another word
@@ -206,7 +206,6 @@ LAlt::LCtrl
 :?*:^^9::{U+2079}	
 :?*:^^n::{U+207F}					;ⁿ
 :?*:^^k::{U+1D4F}					;ᵏ
-:?*:^^x::{U+02E3}					;ˣ
 :?*:^^+::{U+207A}	
 :?*:^^-::{U+207B} 					;⁻
 :?*:^^st::{U+02E2}{U+1D57}			;ˢᵗ
@@ -301,11 +300,6 @@ LAlt::LCtrl
 :*?:otj!@::{U+1F9B9}{U+200D}{U+2642}{U+FE0F}{U+1D3C}{U+1D40}{U+1D36}	;🦹‍♂️ᴼᵀᴶ
 :*?:blb!@::{U+1F341}{U+1D2F}{U+1D38}{U+1D2F}							;🍁ᴯᴸᴯ
 :*?:mh3!@::{U+1F419}{U+1D39}{U+1D34}{U+00B3}							;🐙ᴹᴴ³
-:*?:dsk!@::{U+1F98B}{U+1D30}{U+02E2}{U+1D37} 							;🦋ᴰˢᴷ
-; superscript capital S doesn't exist
-;:*?:dsk!@::{U+1F98B}{U+1D48}{U+02E2}{U+1D4F} 							;🦋ᵈˢᵏ
-
-
 ; this capital C is too large ᶫᴸꟲᴵᶦ	
 :*:ix!@::{U+1F9ED}{U+1D38}{U+A7F2}{U+1D35} 								;🧭ᴸꟲᴵ
 :*?:lci!@::{U+1F9ED}{U+029F}{U+1D04}{U+026A}							;🧭ʟᴄɪ
@@ -348,7 +342,7 @@ LAlt::LCtrl
 :*?:walk!@::{U+1F6B6}{U+1F3FD}{U+200D}{U+2640}						;🚶🏽‍♀
 :*?:heartflame!@::{U+2764}{U+200D}{U+1F525}							;❤‍🔥
 
-:*?:pigjp!@::{U+208D}{U+1422}{U+FF65}{U+2687}{U+FF65}{U+1422}{U+208E} ;₍ᐢ･⚇･ᐢ₎
+:*?:pig!@::{U+208D}{U+1422}{U+FF65}{U+2687}{U+FF65}{U+1422}{U+208E} ;₍ᐢ･⚇･ᐢ₎
 :*?:o.o!::{Asc 0242}.{Asc 0243}			;ò.ó
 :*?:bearjp!@::{U+1D16}{U+1D25}{U+1D16}	;ᴖᴥᴖ
 :*?:>><::>.<
@@ -433,7 +427,6 @@ LAlt::LCtrl
 :*?:bullettrain!@::{U+1F684}			;🚄
 :*?:train!@::{U+1F682}					;🚂
 :*?:blitz!@::{U+26A1}					;⚡
-:*?:static!@::{U+1F94A}					;🥊
 :*?:music!@::{U+1F3B6}					;🎶
 :*?:joker!@::{U+1F0CF}					;🃏
 :*?:mtg!@::{U+1F3B4}					;🎴
@@ -456,7 +449,6 @@ LAlt::LCtrl
 :*?:bread!@::{U+1F35E}					;🍞
 :*?:egg!@::{U+1F95A}					;🥚
 :*?:rabbit!@::{U+1F407}					;🐇
-:*?:moomba!@::{U+1F407}					;🐇
 :*?:discipline!@::{U+1F4FF}				;📿
 :?:dis!@::{U+1F4FF}						;📿
 ;:*?:war!@::{U+1FA96}					;🪖 → 🪓
@@ -515,7 +507,7 @@ LAlt::LCtrl
 :*?:lotion!@::{U+1F9F4}					;🧴
 :*?:bank!@::{U+1F3E6}					;🏦
 :*?:acro!@::{U+1F3DB}					;🏛
-:*?:history!@::{U+1F3DB}{U+FE0F}		;🏛
+:*?:history!@::{U+1F3DB}				;🏛
 :*?:philo!@::{U+1F3DB}					;🏛, for philosophy
 :*?:beetle!@::{U+1FAB2}					;🪲
 :*?:grub!@::{U+1F41B}					;🐛
@@ -527,13 +519,10 @@ LAlt::LCtrl
 :*?:tohru!@::{U+1F699}					;🚙
 :*?:broom!@::{U+1F9F9}					;🧹
 :*?:clean!@::{U+1F9F9}					;🧹
-:*?:pig!@::{U+1F437}					;🐷
-:*?:aerry!@::{U+1F416}					;🐖
+:*?:aerry!@::{U+1F437}					;🐷
 :*?:fates!@::{U+269C}{U+FE0F}			;⚜️
 :*?:engage!@::{U+269C}{U+FE0F}			;⚜️
 :*?:moon!@::{U+1F31C}					;🌜
-:*?:sect!@::{U+1F319}					;🌙
-:*?:orbit!@::{U+1F4AB}					;💫
 :*?:leopard!@::{U+1F406}				;🐆
 :*?:tiger!@::{U+1F42F}					;🐯
 :*?:winry!@::{U+1F405}					;🐅
@@ -549,7 +538,7 @@ LAlt::LCtrl
 :*?:cody!@::{U+1F994}					;🦔
 :*?:wave!@::{U+1F30A}					;🌊
 :*?:compress!@::{U+1F30A}				;🌊
-:*?:drop!@::{U+1F4A7}					;💧
+:*?:water!@::{U+1F4A7}					;💧
 :*?:hydrate!@::{U+1F4A7}				;💧
 :*?:childrenxing!@::{U+1F6B8}			;🚸
 :*?:shield!@::{U+1F6E1}{U+FE0F}			;🛡️
@@ -557,9 +546,8 @@ LAlt::LCtrl
 :*?:tears!@::{U+1F6E1}{U+FE0F}			;🛡 ←tears of the kingdom
 :*?:aoe4!@::{U+1F6E1}{U+FE0F}{U+2074}	;🛡⁴
 :*?:sage!@::{U+2728}					;✨
-:*?:collective!@::{U+1F320}				;🌠
-:*?:horoscope!@::{U+26CE}				;⛎
-:*?:horo!@::{U+1F52D}					;🔭
+:*?:sparkle!@::{U+2728}					;✨
+:*?:dust!@::{U+2728}					;✨
 :*?:warning!@::{U+26A0}{U+FE0F}			;⚠
 :*?:bear!@::{U+1F43B}					;🐻
 :*?:bears!@::{U+1F43B}{U+00B2}			;🐻²
@@ -589,8 +577,7 @@ LAlt::LCtrl
 :*?:dungeon!@::{U+26D3}					;⛓
 :*?:sweat!@::{U+1F4A6}					;💦
 :*?:droplets!@::{U+1F4A6}				;💦
-:*?:water!@::{U+1F4A6}					;💦
-:*?:cup!@::{U+1F35C}					;🍜
+:*?:food!@::{U+1F35C}					;🍜
 :*?:meal!@::{U+1F35C}					;🍜
 :*?:ducati!@::{U+1F3CD}					;🏍
 :*?:truck!@::{U+1F6FB}					;🛻
@@ -625,8 +612,7 @@ LAlt::LCtrl
 :*?:scissors!@::{U+2702}				;✂
 :*?:nunu!@::{U+26C4}					;⛄
 :*?:bf!@::{U+1F98B}						;🦋
-:*?:beginner!@::{U+1F530}				;🔰
-:*?:new!@::{U+1F195}					;🆕
+:*?:new!@::{U+1F530}					;🔰
 :*?:lv!@::{U+1F6E9}.{U+1F4F9}			;🛩.📹
 :*?:lp!@::{U+1F6E9}.{U+1F94B}			;🛩.🥋
 :?:lr!@::{U+1F6E9}.{U+1F916}			;🛩.🤖
@@ -664,14 +650,12 @@ LAlt::LCtrl
 :*?:rice!@::{U+1F33E}					;🌾
 :*?:printer!@::{U+1F5A8}{U+FE0F}		;🖨️
 :*?:crown!@::{U+1F451}					;👑
-:*?:queen!@::{U+1F451}					;👑
 :*?:general!@::{U+1F396}{U+FE0F}		;🎖️
 :*?:liran!@::Liran{U+1F396}{U+FE0F}		;🎖️Liran
 :*?:hr!@::{U+1F3E1}.{U+1F52C}			;🏡.🔬
 :*:cr!@::{U+1F4B3}.{U+1F52C}			;💳.🔬
 :*?:construct!@::{U+1F6A7}				;🚧
 :*?:wolf!@::{U+1F43A}					;🐺
-:*?:mitsu!@::{U+1F43A}					;🐺
 :*?:skunk!@::{U+1F9A8}					;🦨
 :*?:dance!@::{U+1F483}					;💃
 :*?:cake!@::{U+1F370}					;🍰
@@ -697,7 +681,6 @@ LAlt::LCtrl
 :*?:logging!@::{U+1FA9A}				;🪚
 :*?:rain!@::{U+1F327}					;🌧
 :*?:tv!@::{U+1F4FA}						;📺
-:*?:pc!@::{U+1F5A5}{U+FE0F}				;🖥️
 :*?:gas!@::{U+26FD}						;⛽
 :*?:fox!@::{U+1F98A}					;🦊
 :*?:watermelon!@::{U+1F349}				;🍉
@@ -707,9 +690,7 @@ LAlt::LCtrl
 :*?:lemon!@::{U+1F34B}					;🍋
 :*?:pear!@::{U+1F350}					;🍐
 :*?:orange!@::{U+1F34A}					;🍊
-:*?:owen!@::{U+1F34A}					;🍊
 :*?:sb!@::{U+1F353}						;🍓
-:*?:kb!@::{U+1F353}						;🍓
 :*?:bb!@::{U+1FAD0}						;🫐
 :*?:cherry!@::{U+1F352}					;🍒
 :*?:grapes!@::{U+1F347}					;🍇
@@ -721,7 +702,6 @@ LAlt::LCtrl
 :*?:yoyo!@::{U+1F99B}					;🦛
 :*?:berries!@::{U+1FAD0}				;🫐
 :*?:dragon!@::{U+1F409}					;🐉
-:*?:hana!@::{U+1F409}					;🐉
 :*?:dragonhead!@::{U+1F432}				;🐲
 :*?:wheel!@::{U+1F6DE}					;🛞
 :*?:zzz!@::{U+1F4A4}					;💤
@@ -760,7 +740,6 @@ LAlt::LCtrl
 :*?:tomato!@::{U+1F345}					;🍅
 :*?:ram!@::{U+1F40F}					;🐏
 :*?:goat!@::{U+1F410}					;🐐
-:*?:goobie!@::{U+1F410}					;🐐
 :*?:ewe!@::{U+1F411}					;🐑
 :*?:soap!@::{U+1F9FC}					;🧼
 :*?:dishes!@::{U+1F37D}{U+FE0F}			;🍽️
@@ -827,7 +806,6 @@ LAlt::LCtrl
 :*?:ginger!@::{U+1FADA}					;🫚
 :*?:garlic!@::{U+1F9C4}					;🧄
 :*?:shinto!@::{U+26E9}{U+FE0F}			;⛩️
-:*?:shogun!@::{U+26E9}{U+FE0F}			;⛩️
 :*?:honk!@::{U+1FABF}					;🪿
 :*?:battery!@::{U+1F50B}				;🔋
 :*?:charge!@::{U+1FAAB}					;🪫
@@ -852,39 +830,6 @@ LAlt::LCtrl
 :*?:mouse!@::{U+1F5B1}{U+FE0F}			;🖱️
 :*?:ka!@::{U+1F33A}						;🌺
 :*?:plus!@::{U+2795}					;➕
-:*?:paw!@::{U+1F43E}					;🐾
-:*?:skull!@::{U+1F480}					;💀
-:*?:astro!@::{U+1F52E}					;🔮
-:*?:malefic!@::{U+2721}{U+FE0F}			;✡️
-:*?:exalt!@::{U+262A}{U+FE0F}			;☪️
-:*?:hug!@::{U+1FAC2}					;🫂
-:*?:tennis!@::{U+1F3BE}					;🎾
-:*?:run!@::{U+1F3C3}{U+1F3FD}			;🏃🏽
-:*?:mushroom!@::{U+1F344}				;🍄
-:*?:whm!@::{U+1F4AE}					;💮
-:*?:neva!@::{U+1F4AE}					;💮
-:*?:socks!@::{U+1F9E6}					;🧦
-:*?:peanut!@::{U+1F95C}					;🥜
-:*?:corn!@::{U+1F33D}					;🌽
-:*?:fix!@::{U+1FA9B}					;🪛
-:*?:ruck!@::{U+1F392}					;🎒
-:*?:potato!@::{U+1F954}					;🥔
-:*?:money!@::{U+1F4B0}					;💰
-:*?:lala!@::{U+1F5FF}					;🗿
-:*?:aloalo!@::{U+1F3DD}{U+FE0F}			;🏝️
-:*?:island!@::{U+1F3DD}{U+FE0F}			;🏝️
-:*?:wing!@::{U+1FABD}					;🪽
-
-:*?:statice!@::{U+1F9DA}{U+1F3FB}{U+200D}{U+2640}{U+FE0F}	;🧚🏻‍♀️
-:*?:oppo!@::{U+1F9DA}{U+1F3FD}{U+200D}{U+2640}{U+FE0F}		;🧚🏽‍♀️
-:*?:mend!@::{U+2764}{U+FE0F}{U+200D}{U+1FA79}	 			;❤️‍🩹
-:*?:m1s!@::M1S.{U+1F408}{U+200D}{U+2B1B} 					;M1S.🐈‍⬛
-:*?:m2s!@::M2S.{U+1F41D} 									;M2S.🐝
-:*?:m3s!@::M3S.{U+1F4A3}									;M3S.💣
-:*?:m4s!@::M4S.{U+26A1}										;M4S.⚡
-:*?:smn!@::{U+1F426}{U+200D}{U+1F525}						;🐦‍🔥
-:*?:tessa!@::{U+1F426}{U+200D}{U+1F525}						;🐦‍🔥
-;*?:kb!@::{U+1F353}.{U+1F426}{U+200D}{U+1F525}				;🍓.🐦‍🔥
 
 
 ; discord markdown code span emojis 
@@ -959,19 +904,7 @@ LAlt::LCtrl
 }
 
 ; TODO: hoggydesk macros
-::backtodesk:: {
-    Send("!i")
-    Sleep(750)
-    Send("rr")
 
-	Loop 5 {
-    	Send("^y")
-	}
-
-    Sleep(200)
-
-    SendInput("Discord{Enter}Checking Cody{Enter}Awareness{Enter}Logging{Enter}Water {+} Gargle{Enter}Break and Water Timer{Enter}Warcry{Enter}")
-}
 
 
 

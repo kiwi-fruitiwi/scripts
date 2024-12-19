@@ -18,11 +18,11 @@ TraySetIcon("Shell32.dll", 13, 1)
 SoundPlay("*16")
 
 winTitle := "FINAL FANTASY XIV"
-lag := 200
+lag := 300
 
 ; buff and ability execution durations. "instant" for dPad and accept
 instant := 50 + lag
-buff := 1500 + lag
+buff := 1700 + lag
 ability := 2500 + lag
 
 
@@ -33,13 +33,19 @@ action(keybind, duration) {
 
 abilities := Map(
     "accept", action("{m}", instant),
-    "muscle memory", action("{q}", ability),
+    "reflect", action("{q}", ability),
+    "preparatory touch", action("{g}", ability),
+    "prudent synthesis", action("{1}", ability),
+    "basic touch", action("{2}", ability),
+    "standard touch", action("{3}", ability),
+    "advanced touch", action("{4}", ability),
+    "waste not II", action("{5}", buff),
+    "waste not", action("{1}", buff),
     "trained eye", action("{CtrlDown}v{CtrlUp}", ability),
     "veneration", action("{CtrlDown}s{CtrlUp}", buff),
     "manipulation", action("{CtrlDown}q{CtrlUp}", buff),
     "basic synthesis", action("{b}", ability),
     "prudent touch", action("{e}", ability),
-    "prudent synthesis", action("{1}", ability),
     "groundwork", action("{v}", ability),
     "great strides", action("{CtrlDown}x{CtrlUp}", buff),
     "innovation", action("{x}", buff),
@@ -57,7 +63,7 @@ enact(name) {
 	Sleep(delay)
 }
 
-n := InputBox("40 durability current level", "crafting bot 🤖", "w300 h95").value
+n := InputBox("35 durability 2* 730CP: wn² on {5}", "crafting bot 🤖", "w300 h95").value
 Loop n {
 	Loop 4 { 
 		enact("accept") 
@@ -67,31 +73,33 @@ Loop n {
 	Sleep 1000
 
 	; begin synthesis
-	enact("muscle memory")
+	enact("reflect")
 	enact("manipulation")
-	enact("prudent synthesis")
+	enact("waste not II")
+	enact("innovation")
+	enact("preparatory touch")
+	enact("preparatory touch")
+	enact("preparatory touch")
+	enact("preparatory touch")
+	enact("basic touch")
+	enact("standard touch")
+	enact("advanced touch")
 
-	Loop 9 {
-		enact("prudent touch")
-	}
-
-	enact("prudent synthesis")
-
-	; final quality touches: great strides, innovation, byregot's blessing
+	enact("manipulation")
 	enact("great strides")
 	enact("innovation")
 	enact("byregot's blessing")
-	
-	; master's mend → complete synthesis
-	enact("master's mend")
-	Loop 3 {
-		enact("basic synthesis")
-	}
+
+	enact("veneration")
+	enact("waste not")
+	enact("groundwork")
+	enact("groundwork")
+	enact("groundwork")
+	enact("basic synthesis")
 
 	; sleep at the end of the synth to allow time for the menu to load
 	Sleep 2000
 }
-
 
 
 #y:: {           

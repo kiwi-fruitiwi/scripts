@@ -786,6 +786,9 @@ return
     Send, ^y
     Send, ^y
     Send, ^y
+    Send, ^y
+    Sleep, 400
+    Send, {Down}
     Sleep, 400
     Send, {Down}
     Sleep, 400
@@ -800,6 +803,7 @@ return
     SendInput Warcry {U+1F399}{U+FE0F} {+} Proof Prep {U+1F64C}{U+1F3FE}{U+1FA91}{U+1FAB5}{U+1F43E}{U+1F4A7}{U+1F99C}{Up}
     SendInput Water Break {Asc 0187} Timer {Asc 0187} Check Mat {Up}
     SendInput Logging{Up}
+    SendInput Checking Winry, Awareness, & Break{Up}
     SendInput Awareness{up}
     Send, Proofreading & Awareness: 
     Send, ^b
@@ -808,6 +812,8 @@ return
     Send, s
     SendInput {up}Break
     Send, {enter}{down}
+    Sleep, 100
+    Send, {down}
     Sleep, 100
     Send, {down}
     Sleep, 100
@@ -1115,7 +1121,9 @@ You can customize the script by adding more emoji mappings to the GetEmoji() fun
 
 
 ; disable widget bar
-#w::Return
+#w::
+	MsgBox %A_ComputerName% disabled widget bar
+Return
 
 ; convert explorer into win+0 to access taskbar explorer
 #e::#0

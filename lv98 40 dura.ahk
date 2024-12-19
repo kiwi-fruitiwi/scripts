@@ -33,7 +33,10 @@ action(keybind, duration) {
 
 abilities := Map(
     "accept", action("{m}", instant),
-    "muscle memory", action("{q}", ability),
+    "reflect", action("{q}", ability),
+    "preparatory touch", action("{g}", ability),
+    "waste not II", action("{5}", buff),
+    "waste not", action("{ShiftDown}s{ShiftUp}", buff),
     "trained eye", action("{CtrlDown}v{CtrlUp}", ability),
     "veneration", action("{CtrlDown}s{CtrlUp}", buff),
     "manipulation", action("{CtrlDown}q{CtrlUp}", buff),
@@ -57,7 +60,7 @@ enact(name) {
 	Sleep(delay)
 }
 
-n := InputBox("40 durability current level", "crafting bot 🤖", "w300 h95").value
+n := InputBox("Lv.98 40 durability", "crafting bot 🤖", "w300 h95").value
 Loop n {
 	Loop 4 { 
 		enact("accept") 
@@ -67,26 +70,21 @@ Loop n {
 	Sleep 1000
 
 	; begin synthesis
-	enact("muscle memory")
+	enact("reflect")
 	enact("manipulation")
-	enact("prudent synthesis")
-
-	Loop 9 {
-		enact("prudent touch")
-	}
-
-	enact("prudent synthesis")
-
-	; final quality touches: great strides, innovation, byregot's blessing
-	enact("great strides")
+	enact("waste not II")
+	enact("preparatory touch")
+	enact("preparatory touch")
 	enact("innovation")
+	enact("preparatory touch")
+	enact("preparatory touch")
+	enact("great strides")
 	enact("byregot's blessing")
-	
-	; master's mend → complete synthesis
-	enact("master's mend")
-	Loop 3 {
-		enact("basic synthesis")
-	}
+
+	enact("veneration")
+	enact("waste not")
+	enact("groundwork")
+	enact("groundwork")
 
 	; sleep at the end of the synth to allow time for the menu to load
 	Sleep 2000
